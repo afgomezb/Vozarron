@@ -8,4 +8,8 @@ package VO;
  * @version 1.0
  */
 public class Entrenador {
+
+    public Entrenador() {
+    }
 }
+

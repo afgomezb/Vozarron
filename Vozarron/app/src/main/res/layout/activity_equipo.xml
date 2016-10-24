@@ -36,5 +36,11 @@
         android:id="@+id/participantes_titulo"
         android:layout_marginTop="35dp"
         android:layout_below="@+id/nombre_entrenador"
-        android:layout_alignStart="@+id/nombre_entrenador" />
+        android:layout_centerHorizontal="true" />
+
+    <fragment
+        android:id="@+id/fragmento_lista_participantes"
+        class="fragmentos.ListaDeParticipantesFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </RelativeLayout>
