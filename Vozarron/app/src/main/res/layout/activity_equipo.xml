@@ -15,14 +15,15 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="nombre_entrenador"
         android:id="@+id/nombre_entrenador"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/fragmento_lista_participantes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="74dp" />
 
     <ImageView
         android:id="@+id/imagen"
         android:src="@drawable/perfil"
-        android:layout_width="100dp"
-        android:layout_height="120dp"
+        android:layout_width="140dp"
+        android:layout_height="160dp"
         android:layout_below="@id/nombre_entrenador"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
@@ -34,8 +35,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/participantes_titulo"
         android:id="@+id/participantes_titulo"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/imagen"
+        android:layout_above="@+id/fragmento_lista_participantes"
         android:layout_centerHorizontal="true" />
 
     <fragment
@@ -43,8 +43,7 @@
         class="fragmentos.ListaDeParticipantesFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:layout_below="@+id/nombre_entrenador"
-        android:layout_alignParentStart="true" />
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
