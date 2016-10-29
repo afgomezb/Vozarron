@@ -16,8 +16,7 @@ import com.uniquindio.proyecto.android.electiva.vozarron.R;
 public class GruposFragment extends Fragment {
 
     private static final String INDICE = "indice";
-    private int indice;
-
+    private View view;
 
     public GruposFragment() {
 
@@ -38,8 +37,14 @@ public class GruposFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+       // if (view == null) {
+            view = inflater.inflate(R.layout.fragment_grupos,
+                    container, false);
+        //}
+        return view;
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_grupos, container, false);
+        //return inflater.inflate(R.layout.fragment_grupos, container, false);
     }
 
     public static void mostrarMensajeLog(String mensaje) {

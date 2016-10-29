@@ -3,7 +3,6 @@ package fragmentos;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -19,6 +18,7 @@ import com.uniquindio.proyecto.android.electiva.vozarron.R;
 
 import java.util.ArrayList;
 
+import VO.Entrenador;
 import VO.Participante;
 import util.AdaptadorDeParticipante;
 
@@ -42,6 +42,7 @@ public class ListaDeParticipantesFragment extends Fragment implements AdaptadorD
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+
     }
 
     @Override
@@ -61,6 +62,15 @@ public class ListaDeParticipantesFragment extends Fragment implements AdaptadorD
         super.onActivityCreated(savedInstanceState);
         // Se ha completado el onCreate de la actividad
         listadoDeParticipantes = (RecyclerView) getView().findViewById(R.id.listaParticipantes);
+        participantes= new ArrayList<>();
+        Participante participante = new Participante("Valentina", 22, new Entrenador(), "Estudiante","foto", "video");
+        participantes.add(participante);
+        Participante participante2 = new Participante("Andres", 22, new Entrenador(), "Estudiante","foto", "video");
+        participantes.add(participante2);
+        Participante participante3 = new Participante("Melissa", 23, new Entrenador(), "Estudiante","foto", "video");
+        participantes.add(participante3);
+        Participante participante4 = new Participante("Jose", 23, new Entrenador(), "Estudiante","foto", "video");
+        participantes.add(participante4);
         adaptador = new AdaptadorDeParticipante(participantes, this);
         listadoDeParticipantes.setAdapter(adaptador);
         listadoDeParticipantes.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
@@ -92,7 +102,7 @@ public class ListaDeParticipantesFragment extends Fragment implements AdaptadorD
             try {
                 listener = (OnParticipanteSeleccionadoListener) activity;
             } catch (ClassCastException e) {
-                throw new ClassCastException(activity.toString() + " debe implementar la interfaz OnPersonajeSeleccionadoListener");
+                throw new ClassCastException(activity.toString() + " debe implementar la interfaz OnParticipantePersonajeSeleccionadoListener");
             }
         }
     }

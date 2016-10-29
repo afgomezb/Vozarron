@@ -5,24 +5,68 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 
+import fragmentos.ListaDeEntrenadoresFragment;
+import fragmentos.ListaDeParticipantesFragment;
 import util.AdaptadoDePagerFragmet;
 
-public class PrincipalActivity extends AppCompatActivity {
+public class PrincipalActivity extends AppCompatActivity implements ListaDeParticipantesFragment.OnParticipanteSeleccionadoListener, ListaDeEntrenadoresFragment.OnEntrenadorSeleccionadoListener, View.OnClickListener {
+
+    private ViewPager viewPager;
+    private ImageButton btnImage_registrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_principal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
+
         AdaptadoDePagerFragmet adapter = new AdaptadoDePagerFragmet(
                 getSupportFragmentManager());
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(new AdaptadoDePagerFragmet(
                 getSupportFragmentManager()));
+
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         tabLayout.setupWithViewPager(viewPager);
+
+
+        /**
+        btnImage_registrar = (ImageButton) findViewById(R.id.btn_image_registrar);
+        btnImage_registrar.setOnClickListener(this);
+         **/
+    }
+
+    @Override
+    public void onParticipanteSeleccionado(int position) {
+
+    }
+
+    public void modificarVista(int nVista){
+        viewPager.setCurrentItem(nVista);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == btnImage_registrar.getId()) {
+            mostrarMensaje( "botón imagen registrar");
+            modificarVista(3);
+        }
+
+    }
+    public static void mostrarMensaje(String mensaje) {
+        Log.v("Mensaje", mensaje);
+    }
+
+    @Override
+    public void onEntrenadorSeleccionado(int position) {
+
     }
 }

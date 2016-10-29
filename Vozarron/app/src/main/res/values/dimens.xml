@@ -2,4 +2,28 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="margen_arriba_titulo">25dp</dimen>
+    <dimen name="margen_arriba_fragmento">10dp</dimen>
+    <dimen name="margen_arriba_combo_box">40dp</dimen>
+    <dimen name="margen_arriba_boton">25dp</dimen>
+    <dimen name="marge_arriba_imagen">20dp</dimen>
+
+    <dimen name="margen_debajo_iamgen">20dp</dimen>
+    <dimen name="margen_debajo_combo_box">30dp</dimen>
+
+    <dimen name="margen_imagen_boton">25dp</dimen>
+    <dimen name="margen_tabla">20dp</dimen>
+
+    <dimen name="relleno_campos_tabla">3dp</dimen>
+
+    <dimen name="relleno_lados_combo_box">30dp</dimen>
+    <dimen name="relleno_arriba_abajo_combo_box">5dp</dimen>
+
+    <dimen name="ancho_foto_perfil">250dp</dimen>
+    <dimen name="alto_foto_perfil">250dp</dimen>
+
+    <dimen name="altura_maxima_imagen">10dp</dimen>
+    <dimen name="margen_derecha_imagen">16dp</dimen>
+
+    <dimen name="tamano_texto_resumen_nombre">30sp</dimen>
 </resources>

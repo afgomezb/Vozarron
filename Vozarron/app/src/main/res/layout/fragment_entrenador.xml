@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragmentos.EntrenadorFragment"
+    android:orientation="vertical"
+    android:background="@color/fondo_normal">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/imagen"
+        android:src="@drawable/jhonny"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:longClickable="false"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_margin="20dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:stretchColumns="1"
+        android:layout_margin="15dp"
+        android:layout_marginRight="30dp">
+
+        <TableRow>
+            <TextView
+                android:text="@string/etq_id"
+                android:padding="3dip" />
+            <TextView
+                android:text="id_entrenador"
+                android:gravity="right"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="@string/etq_nombre"
+                android:padding="3dip" />
+            <TextView
+                android:text="nombre_entrenador"
+                android:gravity="right"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="@string/etq_genero"
+                android:padding="3dip" />
+            <TextView
+                android:text="genero_entrenador"
+                android:gravity="right"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="@string/etq_historial"
+                android:padding="3dip" />
+            <TextView
+                android:text="historial_participante"
+                android:gravity="right"
+                android:padding="3dip" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/participantes_titulo"
+        android:id="@+id/participantes_titulo"
+        android:layout_gravity="center_horizontal" />
+
+    <ImageButton
+        android:id="@+id/btn_image_lista_participantes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_lista"
+        android:contentDescription="@string/etq_ver_video"
+        android:background="#446789"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp" />
+
+</LinearLayout>

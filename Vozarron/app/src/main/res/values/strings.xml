@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Vozarron</string>
     <string name="participantes_titulo">Participantes</string>
+    <string name="entrenadores_titulo">Entrenadores</string>
+    <string name="grupos_titulo">Grupos</string>
     <string name="etq_votar">Votar</string>
     <string name="etq_id">Id:</string>
     <string name="etq_nombre">Nombre:</string>
@@ -13,11 +15,14 @@
     <string name="etq_edad">Edad:</string>
     <string name="etq_estado">Estado:</string>
     <string name="registrar">Registrar</string>
+    <string name="etq_ver_video">Ver video</string>
     <string name="etq_registrar_participante">Registrar Participante</string>
     <string name="ingrese_nombre">Ingrese su nombre</string>
-
+    <string name="btn_votar">Votar</string>
+    <string name="etq_descripcion">Regiistrar Participante</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>

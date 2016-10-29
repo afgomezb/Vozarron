@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragmentos.VotarFragment"
+    android:orientation="vertical"
+    android:background="@color/fondo_normal">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/participantes_titulo"
+        android:id="@+id/participantes"
+        android:layout_marginTop="@dimen/margen_arriba_titulo"
+        android:layout_gravity="center_horizontal" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/combo_box_participantes"
+        android:layout_marginTop="@dimen/margen_arriba_combo_box"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/margen_debajo_combo_box"
+        android:paddingLeft="@dimen/relleno_lados_combo_box"
+        android:paddingRight="@dimen/relleno_lados_combo_box"
+        android:paddingTop="@dimen/relleno_arriba_abajo_combo_box"
+        android:paddingBottom="@dimen/relleno_arriba_abajo_combo_box" />
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:src="@drawable/perfil"
+        android:layout_width="@dimen/ancho_foto_perfil"
+        android:layout_height="@dimen/alto_foto_perfil"
+        android:longClickable="false"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/etq_votar"
+        android:id="@+id/btn_votar"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margen_arriba_boton" />
+
+</LinearLayout>

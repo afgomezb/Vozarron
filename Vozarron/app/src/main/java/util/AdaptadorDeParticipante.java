@@ -79,4 +79,6 @@ public class AdaptadorDeParticipante extends RecyclerView.Adapter<AdaptadorDePar
             listener.onClickPosition(getAdapterPosition());
         }
     }
+
+
 }
