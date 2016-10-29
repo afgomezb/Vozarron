@@ -15,12 +15,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EquipoActivity" />
-        <activity android:name=".ParticipantesActivity" />
-        <activity android:name=".EntrenadorActivity" />
-        <activity android:name=".VotarActivity" />
-        <activity android:name=".RegistrarParticipanteActivity" />
-        <activity android:name=".ParticipanteActivity"></activity>
     </application>
 
 </manifest>

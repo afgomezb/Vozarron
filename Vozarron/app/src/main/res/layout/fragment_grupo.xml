@@ -9,10 +9,11 @@
     <ImageView
         android:id="@+id/imagen"
         android:src="@drawable/perfil"
-        android:layout_width="140dp"
-        android:layout_height="160dp"
+        android:layout_width="@dimen/ancho_foto_perfil"
+        android:layout_height="@dimen/alto_foto_perfil"
         android:longClickable="false"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/marge_arriba_imagen"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,7 +21,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="nombre_entrenador"
         android:id="@+id/nombre_entrenador"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/margen_debajo_texto"
         android:layout_gravity="center_horizontal" />
 
     <TextView
@@ -37,6 +38,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="10dp" />
+        android:layout_margin="@dimen/margen_fragmento" />
 
 </LinearLayout>

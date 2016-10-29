@@ -7,16 +7,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
 
+import java.util.ArrayList;
+
+import VO.Participante;
 import fragmentos.ListaDeEntrenadoresFragment;
+import fragmentos.ListaDeGruposFragment;
 import fragmentos.ListaDeParticipantesFragment;
 import util.AdaptadoDePagerFragmet;
 
-public class PrincipalActivity extends AppCompatActivity implements ListaDeParticipantesFragment.OnParticipanteSeleccionadoListener, ListaDeEntrenadoresFragment.OnEntrenadorSeleccionadoListener, View.OnClickListener {
+public class PrincipalActivity extends AppCompatActivity implements ListaDeParticipantesFragment.OnParticipanteSeleccionadoListener, ListaDeEntrenadoresFragment.OnEntrenadorSeleccionadoListener, ListaDeGruposFragment.OnGrupoSeleccionadoListener, View.OnClickListener {
 
     private ViewPager viewPager;
-    private ImageButton btnImage_registrar;
+    private ArrayList<Participante> participantes = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,17 +39,11 @@ public class PrincipalActivity extends AppCompatActivity implements ListaDeParti
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         tabLayout.setupWithViewPager(viewPager);
-
-
-        /**
-        btnImage_registrar = (ImageButton) findViewById(R.id.btn_image_registrar);
-        btnImage_registrar.setOnClickListener(this);
-         **/
     }
 
     @Override
     public void onParticipanteSeleccionado(int position) {
-
+        modificarVista(5);
     }
 
     public void modificarVista(int nVista){
@@ -55,10 +52,7 @@ public class PrincipalActivity extends AppCompatActivity implements ListaDeParti
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == btnImage_registrar.getId()) {
-            mostrarMensaje( "botón imagen registrar");
-            modificarVista(3);
-        }
+
 
     }
     public static void mostrarMensaje(String mensaje) {
@@ -67,6 +61,11 @@ public class PrincipalActivity extends AppCompatActivity implements ListaDeParti
 
     @Override
     public void onEntrenadorSeleccionado(int position) {
+        modificarVista(6);
+    }
 
+    @Override
+    public void onGrupoSeleccionado(int position) {
+        modificarVista(4);
     }
 }

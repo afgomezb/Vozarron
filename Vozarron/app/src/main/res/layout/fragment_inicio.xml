@@ -10,36 +10,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right|top"
-        android:layout_margin="10dp"
-        android:background="#D9D9D9"
+        android:layout_margin="@dimen/margen_imagen_boton_registrar"
+        android:background="@color/fondo_normal"
         android:contentDescription="@string/etq_registrar_participante"
         android:src="@mipmap/ic_registrar" />
 
     <ImageView
         android:id="@+id/imagen_uq"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/ancho_logo_uq"
+        android:layout_height="@dimen/alto_logo_uq"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/marge_arriba_imagen"
         android:src="@mipmap/ic_launcher" />
 
     <ImageView
         android:id="@+id/imagen"
-        android:layout_width="350dp"
-        android:layout_height="250dp"
+        android:layout_width="@dimen/ancho_logo_vozarron"
+        android:layout_height="@dimen/alto_logo_vozarron"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/margen_arriba_imagen_boton"
         android:src="@mipmap/ic_launcher" />
 
     <Button
         android:id="@+id/btn_votar"
-        android:layout_width="100dp"
+        android:layout_width="@dimen/ancho_boton_votar"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="20dp"
-        android:background="#878787"
+        android:layout_marginBottom="@dimen/margen_debajo_boton_votar"
+        android:background="@color/fondo_toolbar"
         android:text="@string/btn_votar"
-        android:textColor="#ffffff"
-        android:textSize="20dp" />
+        android:textColor="@color/white"
+        android:textSize="@dimen/tamano_texto_boton_votar" />
 
 </LinearLayout>

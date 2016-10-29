@@ -3,4 +3,42 @@
          (such as screen margins) for screens with more than 820dp of available width. This
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
     <dimen name="activity_horizontal_margin">64dp</dimen>
+
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="margen_arriba_titulo">25dp</dimen>
+    <dimen name="margen_arriba_fragmento">10dp</dimen>
+    <dimen name="margen_arriba_combo_box">40dp</dimen>
+    <dimen name="margen_arriba_boton">25dp</dimen>
+    <dimen name="marge_arriba_imagen">20dp</dimen>
+    <dimen name="margen_arriba_imagen_boton">10dp</dimen>
+
+    <dimen name="margen_debajo_iamgen">20dp</dimen>
+    <dimen name="margen_debajo_combo_box">30dp</dimen>
+    <dimen name="margen_debajo_boton_votar">20dp</dimen>
+    <dimen name="margen_debajo_texto">15dp</dimen>
+
+    <dimen name="margen_imagen_boton_registrar">10dp</dimen>
+    <dimen name="margen_imagen_boton">25dp</dimen>
+    <dimen name="margen_tabla">20dp</dimen>
+    <dimen name="margen_fragmento">10dp</dimen>
+
+    <dimen name="relleno_campos_tabla">3dp</dimen>
+
+    <dimen name="relleno_lados_combo_box">30dp</dimen>
+    <dimen name="relleno_arriba_abajo_combo_box">5dp</dimen>
+
+    <dimen name="ancho_logo_uq">100dp</dimen>
+    <dimen name="alto_logo_uq">100dp</dimen>
+    <dimen name="ancho_logo_vozarron">350dp</dimen>
+    <dimen name="alto_logo_vozarron">250dp</dimen>
+    <dimen name="ancho_foto_perfil">250dp</dimen>
+    <dimen name="alto_foto_perfil">250dp</dimen>
+
+    <dimen name="altura_maxima_imagen">10dp</dimen>
+    <dimen name="margen_derecha_imagen">16dp</dimen>
+
+    <dimen name="tamano_texto_resumen_nombre">30sp</dimen>
+    <dimen name="tamano_texto_boton_votar">20dp</dimen>
+
+    <dimen name="ancho_boton_votar">100dp</dimen>
 </resources>

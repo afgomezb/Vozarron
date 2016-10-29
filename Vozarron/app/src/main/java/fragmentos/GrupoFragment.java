@@ -38,6 +38,7 @@ public class GrupoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        
        // if (view==null) {
         view = inflater.inflate(R.layout.fragment_grupo,
                 container, false);
