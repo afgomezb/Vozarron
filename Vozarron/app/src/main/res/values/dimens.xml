@@ -11,8 +11,11 @@
 
     <dimen name="margen_debajo_iamgen">20dp</dimen>
     <dimen name="margen_debajo_combo_box">30dp</dimen>
-    <dimen name="margen_debajo_boton_votar">20dp</dimen>
+    <dimen name="margen_debajo_boton_votar">60dp</dimen>
     <dimen name="margen_debajo_texto">15dp</dimen>
+    <dimen name="margen_debajo_imagen_boton">30dp</dimen>
+    <dimen name="margen_debajo_imagen_boton_video">60dp</dimen>
+    <dimen name="margen_debajo_tabla">30dp</dimen>
 
     <dimen name="margen_imagen_boton_registrar">10dp</dimen>
     <dimen name="margen_imagen_boton">25dp</dimen>

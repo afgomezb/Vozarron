@@ -1,4 +1,4 @@
-package fragmentos;
+package com.uniquindio.proyecto.android.electiva.vozarron.fragmentos;
 
 
 import android.os.Bundle;
@@ -13,17 +13,16 @@ import com.uniquindio.proyecto.android.electiva.vozarron.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ParticipantesFragment extends Fragment {
+public class VotarFragment extends Fragment {
 
     private static final String INDICE = "indice";
-    private View view;
 
-    public ParticipantesFragment() {
+    public VotarFragment() {
         // Required empty public constructor
     }
 
-    public static ParticipantesFragment newInstance (int index) {
-        ParticipantesFragment fragment = new ParticipantesFragment();
+    public static VotarFragment newInstance (int index) {
+        VotarFragment fragment = new VotarFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(INDICE, index);
         fragment.setArguments(bundle);
@@ -36,24 +35,10 @@ public class ParticipantesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-       // if(view == null) {
-            view = inflater.inflate(R.layout.fragment_participantes,
-                    container, false);
-        //}
-
         // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_participantes, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_votar, container, false);
     }
 
-    @Override
-    public void onDestroyView() {
-       super.onDestroyView();
-           ParticipantesFragment f = (ParticipantesFragment) getFragmentManager()
-                .findFragmentById(R.id.listaParticipantes);
-        if (f != null)
-            getFragmentManager().beginTransaction().remove(f).commit();
-    }
     public static void mostrarMensajeLog(String mensaje) {
         Log.v("MyClonFragment", mensaje);
     }

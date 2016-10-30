@@ -1,4 +1,4 @@
-package com.uniquindio.proyecto.android.electiva.vozarron;
+package com.uniquindio.proyecto.android.electiva.vozarron.actividades;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -10,11 +10,12 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-import VO.Participante;
-import fragmentos.ListaDeEntrenadoresFragment;
-import fragmentos.ListaDeGruposFragment;
-import fragmentos.ListaDeParticipantesFragment;
-import util.AdaptadoDePagerFragmet;
+import com.uniquindio.proyecto.android.electiva.vozarron.R;
+import com.uniquindio.proyecto.android.electiva.vozarron.VO.Participante;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeEntrenadoresFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeGruposFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeParticipantesFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.util.AdaptadoDePagerFragmet;
 
 public class PrincipalActivity extends AppCompatActivity implements ListaDeParticipantesFragment.OnParticipanteSeleccionadoListener, ListaDeEntrenadoresFragment.OnEntrenadorSeleccionadoListener, ListaDeGruposFragment.OnGrupoSeleccionadoListener, View.OnClickListener {
 

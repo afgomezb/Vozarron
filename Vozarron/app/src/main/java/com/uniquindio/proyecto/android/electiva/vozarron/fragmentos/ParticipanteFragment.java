@@ -1,4 +1,4 @@
-package fragmentos;
+package com.uniquindio.proyecto.android.electiva.vozarron.fragmentos;
 
 
 import android.content.Intent;

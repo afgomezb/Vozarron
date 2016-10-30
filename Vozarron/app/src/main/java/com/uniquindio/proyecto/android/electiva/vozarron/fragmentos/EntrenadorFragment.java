@@ -1,4 +1,4 @@
-package fragmentos;
+package com.uniquindio.proyecto.android.electiva.vozarron.fragmentos;
 
 
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.uniquindio.proyecto.android.electiva.vozarron.PrincipalActivity;
+import com.uniquindio.proyecto.android.electiva.vozarron.actividades.PrincipalActivity;
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
 
 /**

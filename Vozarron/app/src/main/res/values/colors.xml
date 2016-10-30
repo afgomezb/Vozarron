@@ -21,6 +21,7 @@
     <color name="android_purple">#FFaa66cc</color>
     <color name="android_darkpurple">#FF9933cc</color>
     <color name="fondo_lista">#999999</color>
+    <color name="fondo_items">#A0A0A0</color>
     <color name="fondo_normal">#D9D9D9</color>
     <color name="fondo_toolbar">#707070</color>
 </resources>

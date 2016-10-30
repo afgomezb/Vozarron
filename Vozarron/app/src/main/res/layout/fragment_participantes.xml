@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="fragmentos.ParticipantesFragment"
-    android:background="@color/fondo_normal">
+    tools:context=".fragmentos.ParticipantesFragment"
+    android:background="@color/fondo_normal"
+    android:id="@+id/fragmento_participantes">
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,10 +18,13 @@
 
     <fragment
         android:id="@+id/fragmento_lista_participantes"
-        class="fragmentos.ListaDeParticipantesFragment"
+        class="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeParticipantesFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="@dimen/margen_arriba_fragmento" />
+        android:layout_margin="@dimen/margen_arriba_fragmento"
+        android:name="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ParticipantesFragment"/>
+
+    <!--class="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeParticipantesFragment"-->
 
 </LinearLayout>

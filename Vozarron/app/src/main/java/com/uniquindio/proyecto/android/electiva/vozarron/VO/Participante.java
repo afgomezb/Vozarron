@@ -1,4 +1,4 @@
-package VO;
+package com.uniquindio.proyecto.android.electiva.vozarron.VO;
 
 /**
  * Clase para represetar a un participante del Vozarron

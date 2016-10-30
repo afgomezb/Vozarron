@@ -1,4 +1,4 @@
-package fragmentos;
+package com.uniquindio.proyecto.android.electiva.vozarron.fragmentos;
 
 
 import android.app.Activity;
@@ -15,12 +15,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
+import com.uniquindio.proyecto.android.electiva.vozarron.VO.Entrenador;
+import com.uniquindio.proyecto.android.electiva.vozarron.VO.Participante;
+import com.uniquindio.proyecto.android.electiva.vozarron.util.AdaptadorDeParticipante;
 
 import java.util.ArrayList;
-
-import VO.Entrenador;
-import VO.Participante;
-import util.AdaptadorDeParticipante;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -71,6 +70,18 @@ public class ListaDeParticipantesFragment extends Fragment implements AdaptadorD
         participantes.add(participante3);
         Participante participante4 = new Participante("Jose", 23, new Entrenador(), "Estudiante","foto", "video");
         participantes.add(participante4);
+        Participante participante5 = new Participante("Jorge", 23, new Entrenador(), "Estudiante","foto", "video");
+        participantes.add(participante5);
+        Participante participante6 = new Participante("Mario", 23, new Entrenador(), "Estudiante","foto", "video");
+        participantes.add(participante6);
+        Participante participante7 = new Participante("Pablo", 23, new Entrenador(), "Estudiante","foto", "video");
+        participantes.add(participante7);
+        Participante participante8 = new Participante("Luisa", 23, new Entrenador(), "Estudiante","foto", "video");
+        participantes.add(participante8);
+        Participante participante9 = new Participante("Rosa", 23, new Entrenador(), "Estudiante","foto", "video");
+        participantes.add(participante9);
+        Participante participante10 = new Participante("Juana", 23, new Entrenador(), "Estudiante","foto", "video");
+        participantes.add(participante10);
         adaptador = new AdaptadorDeParticipante(participantes, this);
         listadoDeParticipantes.setAdapter(adaptador);
         listadoDeParticipantes.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));

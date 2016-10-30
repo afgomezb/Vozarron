@@ -1,4 +1,4 @@
-package util;
+package com.uniquindio.proyecto.android.electiva.vozarron.util;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -6,15 +6,15 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 
-import fragmentos.EntrenadorFragment;
-import fragmentos.EntrenadoresFragment;
-import fragmentos.GrupoFragment;
-import fragmentos.GruposFragment;
-import fragmentos.Inicio_Fragment;
-import fragmentos.ParticipanteFragment;
-import fragmentos.ParticipantesFragment;
-import fragmentos.RegistrarFragment;
-import fragmentos.VotarFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.EntrenadorFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.EntrenadoresFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.GrupoFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.GruposFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.Inicio_Fragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ParticipanteFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ParticipantesFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.RegistrarFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.VotarFragment;
 
 /**
  * Created by USUARIO WINDOWS on 24/10/2016.

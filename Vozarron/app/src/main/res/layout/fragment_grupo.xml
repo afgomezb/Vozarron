@@ -1,43 +1,47 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="fragmentos.GrupoFragment"
-    android:background="@color/fondo_normal">
-
-    <ImageView
-        android:id="@+id/imagen"
-        android:src="@drawable/perfil"
-        android:layout_width="@dimen/ancho_foto_perfil"
-        android:layout_height="@dimen/alto_foto_perfil"
-        android:longClickable="false"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/marge_arriba_imagen"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="nombre_entrenador"
-        android:id="@+id/nombre_entrenador"
-        android:layout_marginBottom="@dimen/margen_debajo_texto"
-        android:layout_gravity="center_horizontal" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/participantes_titulo"
-        android:id="@+id/participantes_titulo"
-        android:layout_gravity="center_horizontal" />
-
-    <fragment
-        android:id="@+id/fragmento_lista_participantes"
-        class="fragmentos.ListaDeParticipantesFragment"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollViewGrupo"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="@dimen/margen_fragmento" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".fragmentos.GrupoFragment"
+        android:background="@color/fondo_normal">
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/imagen"
+            android:src="@drawable/perfil"
+            android:layout_width="@dimen/ancho_foto_perfil"
+            android:layout_height="@dimen/alto_foto_perfil"
+            android:longClickable="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/marge_arriba_imagen"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="nombre_entrenador"
+            android:id="@+id/nombre_entrenador"
+            android:layout_marginBottom="@dimen/margen_debajo_texto"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/participantes_titulo"
+            android:id="@+id/participantes_titulo"
+            android:layout_gravity="center_horizontal" />
+
+        <fragment
+            android:id="@+id/fragmento_lista_participantes"
+            class="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeParticipantesFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margen_fragmento" />
+
+    </LinearLayout>
+</ScrollView>

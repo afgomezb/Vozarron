@@ -1,4 +1,4 @@
-package util;
+package com.uniquindio.proyecto.android.electiva.vozarron.util;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -11,8 +11,8 @@ import com.uniquindio.proyecto.android.electiva.vozarron.R;
 
 import java.util.ArrayList;
 
-import VO.Participante;
-import fragmentos.ListaDeParticipantesFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.VO.Participante;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeParticipantesFragment;
 
 /**
  * Created by USUARIO WINDOWS on 23/10/2016.

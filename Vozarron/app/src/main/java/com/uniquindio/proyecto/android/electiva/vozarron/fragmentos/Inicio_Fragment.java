@@ -1,4 +1,4 @@
-package fragmentos;
+package com.uniquindio.proyecto.android.electiva.vozarron.fragmentos;
 
 
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.uniquindio.proyecto.android.electiva.vozarron.PrincipalActivity;
+import com.uniquindio.proyecto.android.electiva.vozarron.actividades.PrincipalActivity;
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
 
 /**
@@ -55,6 +55,20 @@ public class Inicio_Fragment extends Fragment implements View.OnClickListener {
         btnImage_registrar.setOnClickListener(this);
 
         return view;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mostrarMensajeLog("El fragmento esta en pausa en este momento");
+        onDestroy();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        // Limpieza total del fragmento
+        mostrarMensajeLog("El fragmento ha sido destruido");
     }
 
     public static void mostrarMensajeLog(String mensaje) {

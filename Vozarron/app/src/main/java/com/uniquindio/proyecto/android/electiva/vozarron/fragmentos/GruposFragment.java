@@ -1,4 +1,4 @@
-package fragmentos;
+package com.uniquindio.proyecto.android.electiva.vozarron.fragmentos;
 
 
 import android.os.Bundle;
@@ -45,6 +45,19 @@ public class GruposFragment extends Fragment {
 
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_grupos, container, false);
+    }
+    @Override
+    public void onPause() {
+        super.onPause();
+        mostrarMensajeLog("El fragmento Grupos esta en pausa en este momento");
+        onDestroy();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        // Limpieza total del fragmento
+        mostrarMensajeLog("El fragmento Grupos ha sido destruido");
     }
 
     public static void mostrarMensajeLog(String mensaje) {

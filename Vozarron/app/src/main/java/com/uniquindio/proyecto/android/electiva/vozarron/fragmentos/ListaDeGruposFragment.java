@@ -1,4 +1,4 @@
-package fragmentos;
+package com.uniquindio.proyecto.android.electiva.vozarron.fragmentos;
 
 
 import android.app.Activity;
@@ -19,8 +19,8 @@ import com.uniquindio.proyecto.android.electiva.vozarron.R;
 
 import java.util.ArrayList;
 
-import VO.Entrenador;
-import util.AdaptadorDeGrupo;
+import com.uniquindio.proyecto.android.electiva.vozarron.VO.Entrenador;
+import com.uniquindio.proyecto.android.electiva.vozarron.util.AdaptadorDeGrupo;
 
 /**
  * A simple {@link Fragment} subclass.

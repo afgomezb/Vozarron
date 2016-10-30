@@ -1,4 +1,4 @@
-package fragmentos;
+package com.uniquindio.proyecto.android.electiva.vozarron.fragmentos;
 
 
 import android.os.Bundle;
@@ -47,13 +47,27 @@ public class EntrenadoresFragment extends Fragment {
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+        mostrarMensajeLog("El fragmento Entrenadores esta en pausa en este momento");
+        onDestroy();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        // Limpieza total del fragmento
+        mostrarMensajeLog("El fragmento  Entrenadores ha sido destruido");
+    }
+/**
+    @Override
     public void onDestroyView() {
         super.onDestroyView();
         EntrenadoresFragment f = (EntrenadoresFragment) getFragmentManager()
                 .findFragmentById(R.id.fragmento_lista_entrenadores);
         if (f != null)
             getFragmentManager().beginTransaction().remove(f).commit();
-    }
+    **/
 
     public static void mostrarMensajeLog(String mensaje) {
         Log.v("MyClonFragment", mensaje);

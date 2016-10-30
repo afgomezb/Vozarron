@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fragmentos.GruposFragment"
+    tools:context=".fragmentos.GruposFragment"
     android:background="@color/fondo_normal"
     android:orientation="vertical">
 
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/fragmento_lista_grupos"
-        class="fragmentos.ListaDeGruposFragment"
+        class="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeGruposFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

@@ -1,76 +1,82 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="fragmentos.ParticipanteFragment"
-    android:background="@color/fondo_normal">
-
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:id="@+id/imagen"
-        android:src="@drawable/perfil"
-        android:layout_width="@dimen/ancho_foto_perfil"
-        android:layout_height="@dimen/alto_foto_perfil"
-        android:longClickable="false"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/marge_arriba_imagen"
-        android:layout_marginBottom="@dimen/margen_debajo_iamgen" />
-
-    <TableLayout
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollViewGrupo"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:stretchColumns="1"
-        android:layout_margin="@dimen/margen_tabla">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".fragmentos.ParticipanteFragment"
+        android:background="@color/fondo_normal">
 
-        <TableRow>
-            <TextView
-                android:text="@string/etq_nombre"
-                android:padding="@dimen/relleno_campos_tabla" />
-            <TextView
-                android:text="nombre_participante"
-                android:gravity="right"
-                android:padding="@dimen/relleno_campos_tabla" />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:text="@string/etq_edad"
-                android:padding="@dimen/relleno_campos_tabla" />
-            <TextView
-                android:text="edad_participante"
-                android:gravity="right"
-                android:padding="@dimen/relleno_campos_tabla" />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:text="@string/etq_entrenador"
-                android:padding="3dip" />
-            <TextView
-                android:text="entrenador_participante"
-                android:gravity="right"
-                android:padding="@dimen/relleno_campos_tabla" />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:text="@string/etq_estado"
-                android:padding="@dimen/relleno_campos_tabla" />
-            <TextView
-                android:text="estado_participante"
-                android:gravity="right"
-                android:padding="@dimen/relleno_campos_tabla" />
-        </TableRow>
+        <!-- TODO: Update blank fragment layout -->
+        <ImageView
+            android:id="@+id/imagen"
+            android:src="@drawable/perfil"
+            android:layout_width="@dimen/ancho_foto_perfil"
+            android:layout_height="@dimen/alto_foto_perfil"
+            android:longClickable="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/marge_arriba_imagen"
+            android:layout_marginBottom="@dimen/margen_debajo_iamgen" />
 
-    </TableLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:stretchColumns="1"
+            android:layout_margin="@dimen/margen_tabla"
+            android:layout_marginBottom="@dimen/margen_debajo_tabla">
 
-    <ImageButton
-        android:id="@+id/btn_image_video"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_video"
-        android:contentDescription="@string/etq_ver_video"
-        android:background="@color/fondo_normal"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="@dimen/margen_imagen_boton" />
+            <TableRow>
+                <TextView
+                    android:text="@string/etq_nombre"
+                    android:padding="@dimen/relleno_campos_tabla" />
+                <TextView
+                    android:text="nombre_participante"
+                    android:gravity="right"
+                    android:padding="@dimen/relleno_campos_tabla" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/etq_edad"
+                    android:padding="@dimen/relleno_campos_tabla" />
+                <TextView
+                    android:text="edad_participante"
+                    android:gravity="right"
+                    android:padding="@dimen/relleno_campos_tabla" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/etq_entrenador"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="entrenador_participante"
+                    android:gravity="right"
+                    android:padding="@dimen/relleno_campos_tabla" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/etq_estado"
+                    android:padding="@dimen/relleno_campos_tabla" />
+                <TextView
+                    android:text="estado_participante"
+                    android:gravity="right"
+                    android:padding="@dimen/relleno_campos_tabla" />
+            </TableRow>
 
-</LinearLayout>
+        </TableLayout>
+
+        <ImageButton
+            android:id="@+id/btn_image_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_video"
+            android:contentDescription="@string/etq_ver_video"
+            android:background="@color/fondo_normal"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margen_imagen_boton"
+            android:layout_marginBottom="@dimen/margen_debajo_imagen_boton_video"/>
+
+    </LinearLayout>
+</ScrollView>

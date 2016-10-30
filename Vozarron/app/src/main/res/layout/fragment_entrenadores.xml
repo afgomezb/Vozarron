@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fragmentos.EntrenadoresFragment"
+    tools:context=".fragmentos.EntrenadoresFragment"
     android:background="@color/fondo_normal"
     android:orientation="vertical">
 
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/fragmento_lista_entrenadores"
-        class="fragmentos.ListaDeEntrenadoresFragment"
+        class="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeEntrenadoresFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
