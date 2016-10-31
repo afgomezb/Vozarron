@@ -16,11 +16,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
-
-import java.util.ArrayList;
-
 import com.uniquindio.proyecto.android.electiva.vozarron.VO.Entrenador;
 import com.uniquindio.proyecto.android.electiva.vozarron.util.AdaptadorDeGrupo;
+import com.uniquindio.proyecto.android.electiva.vozarron.util.Entrenadores;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -64,15 +64,10 @@ public class ListaDeGruposFragment extends Fragment implements AdaptadorDeGrupo.
         //  if (getView()!= null)
         listadoDeGrupos = (RecyclerView) getView().findViewById(R.id.listaGrupos);
         grupos = new ArrayList<>();
-        Entrenador grup = new Entrenador("00001", "Jhonny Rivera", "Despecho", "Jhon Jairo Rivera Valencia nació en Pereira, Colombia es el tercero de cuatro hijos, sus padres Maria Mabel Valencia y Jose Oscar Rivera'.7 y sus hermanos Julieta, Luz Piedad y Oscar Mario unos campesinos como él.");
-        grupos.add(grup);
-        mostrarMensajeLog("Cantidad de entrenadores:" + grupos.size());
 
-        Entrenador grup2 = new Entrenador("00002", "Rihanna", "Pop", "Jhon Jairo Rivera Valencia nació en Pereira, Colombia es el tercero de cuatro hijos, sus padres Maria Mabel Valencia y Jose Oscar Rivera'.7 y sus hermanos Julieta, Luz Piedad y Oscar Mario unos campesinos como él.");
-        grupos.add(grup2);
+        Entrenadores lista = new Entrenadores();
 
-        Entrenador grup3 = new Entrenador("00003", "Adele", "Pop", "Jhon Jairo Rivera Valencia nació en Pereira, Colombia es el tercero de cuatro hijos, sus padres Maria Mabel Valencia y Jose Oscar Rivera'.7 y sus hermanos Julieta, Luz Piedad y Oscar Mario unos campesinos como él.");
-        grupos.add(grup3);
+        grupos.addAll(lista.getEntrenadores());
 
         adaptador = new AdaptadorDeGrupo(grupos, this);
         listadoDeGrupos.setAdapter(adaptador);

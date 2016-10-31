@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
 import com.uniquindio.proyecto.android.electiva.vozarron.VO.Entrenador;
 import com.uniquindio.proyecto.android.electiva.vozarron.util.AdaptadorDeEntrenador;
+import com.uniquindio.proyecto.android.electiva.vozarron.util.Entrenadores;
 
 import java.util.ArrayList;
 
@@ -61,20 +62,15 @@ public class ListaDeEntrenadoresFragment extends Fragment implements AdaptadorDe
         super.onActivityCreated(savedInstanceState);
         // Se ha completado el onCreate de la actividad
       //  if (getView()!= null)
-            listadoDeEntrenadores = (RecyclerView) getView().findViewById(R.id.listaEntrenadores);
-         entrenadores = new ArrayList<>();
-         Entrenador entre = new Entrenador("00001", "Jhonny Rivera", "Despecho", "Jhon Jairo Rivera Valencia naci&oacute; en Pereira, Colombia es el tercero de cuatro hijos, sus padres Maria Mabel Valencia y Jose Oscar Rivera'.7 y sus hermanos Julieta, Luz Piedad y Oscar Mario unos campesinos como &eacute;l.");
-         entrenadores.add(entre);
-         mostrarMensajeLog("Cantidad de entrenadores:" + entrenadores.size());
+        listadoDeEntrenadores = (RecyclerView) getView().findViewById(R.id.listaEntrenadores);
+        entrenadores = new ArrayList<>();
 
-         Entrenador entre2 = new Entrenador("00002", "Rihanna", "Pop", "Jhon Jairo Rivera Valencia naci&oacute; en Pereira, Colombia es el tercero de cuatro hijos, sus padres Maria Mabel Valencia y Jose Oscar Rivera'.7 y sus hermanos Julieta, Luz Piedad y Oscar Mario unos campesinos como &eacute;l.");
-         entrenadores.add(entre2);
+        Entrenadores lista = new Entrenadores();
 
-         Entrenador entre3 = new Entrenador("00003", "Adele", "Pop", "Jhon Jairo Rivera Valencia naci&oacute; en Pereira, Colombia es el tercero de cuatro hijos, sus padres Maria Mabel Valencia y Jose Oscar Rivera'.7 y sus hermanos Julieta, Luz Piedad y Oscar Mario unos campesinos como &eacute;l.");
-         entrenadores.add(entre3);
+        entrenadores.addAll(lista.getEntrenadores());
 
-         adaptador = new AdaptadorDeEntrenador(entrenadores, this);
-         listadoDeEntrenadores.setAdapter(adaptador);
+        adaptador = new AdaptadorDeEntrenador(entrenadores, this);
+        listadoDeEntrenadores.setAdapter(adaptador);
         listadoDeEntrenadores.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
     }
 

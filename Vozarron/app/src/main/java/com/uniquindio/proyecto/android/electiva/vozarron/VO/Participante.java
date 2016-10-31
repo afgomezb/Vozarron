@@ -39,6 +39,8 @@ public class Participante {
      */
     private String urlVideo;
 
+    private String estado;
+
     /**
      * Metodo constructor de Participante
      *
@@ -49,24 +51,26 @@ public class Participante {
      * @param foto       Foto del participante
      * @param urlVideo   Url del video en YOU TUBE con que participara en el concurso el Vozarron
      */
-    public Participante(String nombre, int edad, Entrenador entrenador, String rol, String foto, String urlVideo) {
+    public Participante(String nombre, int edad, Entrenador entrenador, String estado, String rol, String foto, String urlVideo) {
         this.nombre = nombre;
         Edad = edad;
         this.entrenador = entrenador;
         this.rol = rol;
         this.foto = foto;
         this.urlVideo = urlVideo;
+        this.estado = estado;
     }
 
     /**
      * Metodo constructor de Participante vacio
      */
-    public Participante () {
+    public Participante() {
 
     }
 
     /**
      * Metodo para acceder al valor de la variable nombre
+     *
      * @return valor de la variable nombre
      */
     public String getNombre() {
@@ -75,6 +79,7 @@ public class Participante {
 
     /**
      * Metodo modificador del contenido de la variable nombre
+     *
      * @param nombre nuevo contenido de la variable
      */
     public void setNombre(String nombre) {
@@ -83,6 +88,7 @@ public class Participante {
 
     /**
      * Metodo para acceder al valor de la variable edad
+     *
      * @return valor de la variable edad
      */
     public int getEdad() {
@@ -91,6 +97,7 @@ public class Participante {
 
     /**
      * Metodo modificador del contenido de la variable edad
+     *
      * @param edad nuevo contenido de la variable
      */
     public void setEdad(int edad) {
@@ -99,6 +106,7 @@ public class Participante {
 
     /**
      * Metodo para acceder al valor de la variable entrenador
+     *
      * @return valor de la variable entrenador
      */
     public Entrenador getEntrenador() {
@@ -107,6 +115,7 @@ public class Participante {
 
     /**
      * Metodo modificador del contenido de la variable entrenador
+     *
      * @param entrenador nuevo contenido de la variable
      */
     public void setEntrenador(Entrenador entrenador) {
@@ -115,6 +124,7 @@ public class Participante {
 
     /**
      * Metodo para acceder al valor de la variable rol
+     *
      * @return valor de la variable rol
      */
     public String getRol() {
@@ -127,6 +137,7 @@ public class Participante {
 
     /**
      * Metodo para acceder al valor de la variable foto
+     *
      * @return valor de la variable foto
      */
     public String getFoto() {
@@ -135,6 +146,7 @@ public class Participante {
 
     /**
      * Metodo modificador del contenido de la variable foto
+     *
      * @param foto nuevo contenido de la variable
      */
     public void setFoto(String foto) {
@@ -143,6 +155,7 @@ public class Participante {
 
     /**
      * Metodo para acceder al valor de la variable urlVideo
+     *
      * @return valor de la variable urlVideo
      */
     public String getUrlVideo() {
@@ -151,9 +164,18 @@ public class Participante {
 
     /**
      * Metodo modificador del contenido de la variable urlVideo
+     *
      * @param urlVideo nuevo contenido de la variable
      */
     public void setUrlVideo(String urlVideo) {
         this.urlVideo = urlVideo;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 }

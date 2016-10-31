@@ -32,7 +32,7 @@
                     android:text="@string/etq_id"
                     android:padding="@dimen/relleno_campos_tabla" />
                 <TextView
-                    android:text="id_entrenador"
+                    android:id="@+id/id_entrenador"
                     android:gravity="right"
                     android:padding="@dimen/relleno_campos_tabla" />
             </TableRow>
@@ -41,7 +41,7 @@
                     android:text="@string/etq_nombre"
                     android:padding="@dimen/relleno_campos_tabla" />
                 <TextView
-                    android:text="nombre_entrenador"
+                    android:id="@+id/nombre_entrenador"
                     android:gravity="right"
                     android:padding="@dimen/relleno_campos_tabla" />
             </TableRow>
@@ -50,7 +50,7 @@
                     android:text="@string/etq_genero"
                     android:padding="@dimen/relleno_campos_tabla" />
                 <TextView
-                    android:text="genero_entrenador"
+                    android:id="@+id/genero_entrenador"
                     android:gravity="right"
                     android:padding="@dimen/relleno_campos_tabla" />
             </TableRow>
@@ -59,7 +59,7 @@
                     android:text="@string/etq_historial"
                     android:padding="@dimen/relleno_campos_tabla" />
                 <TextView
-                    android:text="historial_participante"
+                    android:id="@+id/historial_participante"
                     android:gravity="right"
                     android:padding="@dimen/relleno_campos_tabla" />
             </TableRow>

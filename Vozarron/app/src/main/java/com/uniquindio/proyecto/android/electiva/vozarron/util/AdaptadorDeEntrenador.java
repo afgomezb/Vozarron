@@ -5,14 +5,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
-
-import java.util.ArrayList;
-
 import com.uniquindio.proyecto.android.electiva.vozarron.VO.Entrenador;
 import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeEntrenadoresFragment;
+
+import java.util.ArrayList;
 
 /**
  * Created by USUARIO WINDOWS on 25/10/2016.
@@ -57,6 +57,7 @@ public class AdaptadorDeEntrenador extends RecyclerView.Adapter<AdaptadorDeEntre
     public static class EntrenadorViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView txtNombreEntrenador;
         private TextView txtGeneroEntrenador;
+        private ImageView foto;
 
 
         public EntrenadorViewHolder(View itemView) {
@@ -66,12 +67,17 @@ public class AdaptadorDeEntrenador extends RecyclerView.Adapter<AdaptadorDeEntre
                     itemView.findViewById(R.id.nombre);
             txtGeneroEntrenador = (TextView)
                     itemView.findViewById(R.id.genero);
+            foto = (ImageView) itemView.findViewById(R.id.imagen);
         }
 
         public void binEntrenador(Entrenador entrenador) {
             txtNombreEntrenador.setText(entrenador.getNombre());
 
             txtGeneroEntrenador.setText(entrenador.getGenero());
+
+           /** String nombreImagen = entrenador.getFoto();
+            int res_imagen = getActivity().getResources().getIdentifier("drawable/" + nombreImagen, null, getActivity().getPackageName());
+            foto.setImageResource(res_imagen);**/
         }
 
         @Override

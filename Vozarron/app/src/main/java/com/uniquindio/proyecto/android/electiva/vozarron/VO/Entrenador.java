@@ -13,15 +13,17 @@ public class Entrenador {
     private String nombre;
     private String genero;
     private String historial;
+    private String foto;
 
     public Entrenador() {
     }
 
-    public Entrenador(String id, String nombre, String genero, String historial) {
+    public Entrenador(String id, String nombre, String genero, String historial, String foto) {
         this.id = id;
         this.nombre = nombre;
         this.genero = genero;
         this.historial = historial;
+        this.foto = foto;
     }
 
     public String getId() {
@@ -54,6 +56,14 @@ public class Entrenador {
 
     public void setHistorial(String historial) {
         this.historial = historial;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 }
 

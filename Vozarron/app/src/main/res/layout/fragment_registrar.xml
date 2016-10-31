@@ -10,32 +10,38 @@
         android:gravity="clip_horizontal"
         android:background="@color/fondo_normal">
 
-        <!-- TODO: Update blank fragment layout -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/etq_registrar_participante"
-            android:id="@+id/registrar_participante"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
+            android:text="@string/etq_nombre"
+            android:id="@+id/etq_nombre"
+            android:layout_marginTop="@dimen/margen_arriba_titulo"
             android:layout_gravity="center_horizontal" />
 
         <EditText
+            android:id="@+id/nombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/nombre"
-            android:layout_marginTop="42dp"
-            android:hint="@string/ingrese_nombre"
-            android:layout_gravity="center_horizontal" />
+            android:hint="@string/etq_nombre_edit"
+            android:inputType="text"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/etq_edad"
+            android:id="@+id/etq_edad"
+            android:layout_marginTop="@dimen/margen_arriba_titulo"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
             android:id="@+id/edad"
-            android:layout_marginTop="42dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/etq_edad_edit"
+            android:inputType="number"
             android:layout_gravity="center_horizontal"/>
 
         <TextView
@@ -43,53 +49,83 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/etq_entrenador"
-            android:id="@+id/entrenador"
+            android:id="@+id/etq_entrenador"
+            android:layout_marginTop="@dimen/margen_arriba_titulo"
             android:layout_gravity="center_horizontal" />
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/combo_box_entrenador"
-            android:layout_gravity="center_horizontal" />
+            android:id="@+id/combo_box_entrenadores"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="@dimen/relleno_lados_combo_box"
+            android:paddingRight="@dimen/relleno_lados_combo_box"
+            android:paddingTop="@dimen/relleno_arriba_abajo_combo_box"
+            android:paddingBottom="@dimen/relleno_arriba_abajo_combo_box" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/etq_rol"
-            android:id="@+id/rol"
-            android:layout_marginTop="46dp"
-            android:layout_gravity="center_horizontal"/>
+            android:id="@+id/etq_rol"
+            android:layout_marginTop="@dimen/margen_arriba_titulo"
+            android:layout_gravity="center_horizontal" />
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/combo_rol"
-            android:layout_gravity="center_horizontal" />
+            android:id="@+id/combo_box_rol"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="@dimen/relleno_lados_combo_box"
+            android:paddingRight="@dimen/relleno_lados_combo_box"
+            android:paddingTop="@dimen/relleno_arriba_abajo_combo_box"
+            android:paddingBottom="@dimen/relleno_arriba_abajo_combo_box" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <TableLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/etq_foto"
-            android:id="@+id/foto"
-            android:layout_marginTop="44dp"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:stretchColumns="1"
+            android:layout_margin="@dimen/margen_tabla">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/etq_video"
-            android:id="@+id/video"
-            android:layout_gravity="center_horizontal" />
+            <TableRow>
+                <TextView
+                    android:text="@string/etq_foto"
+                    android:padding="@dimen/relleno_campos_tabla" />
+                <EditText
+                    android:id="@+id/foto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/etq_foto_edit"
+                    android:inputType="text"
+                    android:layout_gravity="center_horizontal"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="@string/etq_video"
+                    android:padding="@dimen/relleno_campos_tabla" />
+                <EditText
+                    android:id="@+id/video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/etq_video_edit"
+                    android:inputType="textUri"
+                    android:layout_gravity="center_horizontal"/>
+            </TableRow>
+
+        </TableLayout>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/registrar"
+            android:text="@string/etq_registrar"
             android:id="@+id/btn_registrar"
+            android:layout_marginBottom="@dimen/margen_debajo_boton_votar"
+            android:background="@color/fondo_items"
             android:layout_gravity="center_horizontal" />
+
 
     </LinearLayout>
 </ScrollView>

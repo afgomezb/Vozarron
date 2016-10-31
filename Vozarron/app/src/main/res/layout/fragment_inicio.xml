@@ -8,15 +8,33 @@
         android:background="@color/fondo_normal"
         android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/btn_image_registrar"
-            android:layout_width="wrap_content"
+        <TableLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right|top"
-            android:layout_margin="@dimen/margen_imagen_boton_registrar"
-            android:background="@color/fondo_normal"
-            android:contentDescription="@string/etq_registrar_participante"
-            android:src="@mipmap/ic_registrar" />
+            android:layout_gravity="center_horizontal"
+            android:stretchColumns="1"
+            android:layout_margin="@dimen/margen_tabla">
+
+            <TableRow>
+                <ImageButton
+                    android:id="@+id/btn_image_internacionalizacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:background="@color/fondo_normal"
+                    android:contentDescription="@string/etq_internacionalizacion"
+                    android:src="@mipmap/ic_internacionalizacion" />
+                <ImageButton
+                    android:id="@+id/btn_image_registrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@color/fondo_normal"
+                    android:contentDescription="@string/etq_registrar_participante"
+                    android:src="@mipmap/ic_registrar"
+                    />
+            </TableRow>
+        </TableLayout>
 
         <ImageView
             android:id="@+id/imagen_uq"

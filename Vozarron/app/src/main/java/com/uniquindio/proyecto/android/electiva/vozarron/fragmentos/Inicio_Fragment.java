@@ -22,6 +22,7 @@ public class Inicio_Fragment extends Fragment implements View.OnClickListener {
     private static final String INDICE = "indice";
     private Button btn_votar;
     private ImageButton btnImage_registrar;
+    private ImageButton btn_image_internacionalizacion;
 
     public Inicio_Fragment() {
         // Required empty public constructor
@@ -54,6 +55,9 @@ public class Inicio_Fragment extends Fragment implements View.OnClickListener {
         btnImage_registrar = (ImageButton) view.findViewById(R.id.btn_image_registrar);
         btnImage_registrar.setOnClickListener(this);
 
+        btn_image_internacionalizacion = (ImageButton) view.findViewById(R.id.btn_image_internacionalizacion);
+        btn_image_internacionalizacion.setOnClickListener(this);
+
         return view;
     }
 
@@ -83,6 +87,8 @@ public class Inicio_Fragment extends Fragment implements View.OnClickListener {
         } else if (v.getId() == btn_votar.getId()) {
             mostrarMensajeLog("esta es una prueba");
             ((PrincipalActivity)getActivity()).modificarVista(7);
+        } else if (v.getId() == btn_image_internacionalizacion.getId()) {
+            mostrarMensajeLog("ImageButton para la internacionalizacion");
         }
     }
 }

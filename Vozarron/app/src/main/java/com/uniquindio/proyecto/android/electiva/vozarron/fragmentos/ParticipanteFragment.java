@@ -10,10 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
 import com.uniquindio.proyecto.android.electiva.vozarron.VO.Participante;
+import com.uniquindio.proyecto.android.electiva.vozarron.util.Participantes;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,13 +52,8 @@ public class ParticipanteFragment extends Fragment implements View.OnClickListen
         View view = inflater.inflate(R.layout.fragment_participante,
                 container, false);
 
-        TextView edad = (TextView) view.findViewById(R.id.edad_participante);
+        mostrarDatosDeParticipante(view);
 
-        edad.setText("Ejemplo");
-        if(partiSeleccionado!=null) {
-            mostrarMensajeLog("Participante con nombre y edad: "+partiSeleccionado.getNombre()+partiSeleccionado.getEdad());
-            edad.setText(partiSeleccionado.getEdad());
-        }
         btnImage_video = (ImageButton) view.findViewById(R.id.btn_image_video);
         btnImage_video.setOnClickListener(this);
 
@@ -71,7 +68,7 @@ public class ParticipanteFragment extends Fragment implements View.OnClickListen
     public void onClick(View v) {
         if (v.getId() == btnImage_video.getId()) {
             mostrarMensajeLog("Se presiono el boton del video");
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=pO7STLF82Ro"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(partiSeleccionado.getUrlVideo()));
             startActivity(intent);
         }
     }
@@ -82,5 +79,35 @@ public class ParticipanteFragment extends Fragment implements View.OnClickListen
 
     public void setPartiSeleccionado(Participante partiSeleccionado) {
         this.partiSeleccionado = partiSeleccionado;
+    }
+
+    public void mostrarDatosDeParticipante (View view) {
+        //Se trae la lista de participantes
+        Participantes lista_participantes =  new Participantes();
+        int posicion = (int) (Math.random() * lista_participantes.getParticipantes().size());
+        partiSeleccionado = lista_participantes.getParticipantes().get(posicion);
+
+        //se trae nombre del participante
+        TextView nombre = (TextView) view.findViewById(R.id.nom_participante);
+        nombre.setText(partiSeleccionado.getNombre());
+
+        //se trae la edad del participante
+        TextView edad = (TextView) view.findViewById(R.id.edad_participante);
+        edad.setText(partiSeleccionado.getEdad()+" años");
+
+        //se trae el nombre del entrenador del participante
+        TextView nombre_entrenador = (TextView) view.findViewById(R.id.entrenador_nombre);
+        nombre_entrenador.setText(partiSeleccionado.getEntrenador().getNombre());
+
+        //se trae el estado del participante
+        TextView estado = (TextView) view.findViewById(R.id.estado_particiapnte);
+        estado.setText(partiSeleccionado.getEstado());
+
+        //Se trae la imagen del participante
+        ImageView foto = (ImageView) view.findViewById(R.id.imagen);
+        String nombreImagen = lista_participantes.getParticipantes().get(posicion).getFoto();
+        int res_imagen = getActivity().getResources().getIdentifier("drawable/" + nombreImagen, null, getActivity().getPackageName());
+        foto.setImageResource(res_imagen);
+
     }
 }
