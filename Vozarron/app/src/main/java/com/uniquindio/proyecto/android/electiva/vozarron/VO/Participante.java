@@ -59,6 +59,13 @@ public class Participante {
     }
 
     /**
+     * Metodo constructor de Participante vacio
+     */
+    public Participante () {
+
+    }
+
+    /**
      * Metodo para acceder al valor de la variable nombre
      * @return valor de la variable nombre
      */

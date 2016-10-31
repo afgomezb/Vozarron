@@ -3,9 +3,9 @@ package com.uniquindio.proyecto.android.electiva.vozarron.util;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
 
-import java.util.ArrayList;
-
+import com.uniquindio.proyecto.android.electiva.vozarron.VO.Participante;
 import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.EntrenadorFragment;
 import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.EntrenadoresFragment;
 import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.GrupoFragment;
@@ -16,25 +16,48 @@ import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.Participante
 import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.RegistrarFragment;
 import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.VotarFragment;
 
+import java.util.ArrayList;
+
 /**
  * Created by USUARIO WINDOWS on 24/10/2016.
  */
 public class AdaptadoDePagerFragmet extends FragmentPagerAdapter {
+
+    private static final String INICIO = "INICIO";
+
+    private static final String GRUPOS = "GRUPOS";
+
+    private static final String PARTICIPANTES = "PARTICIPANTES";
+
+    private static final String ENTRENADORES = "ENTRENADORES";
+
+    private static final String GRUPO = "GRUPO";
+
+    private static final String PARTICIPANTE = "PARTICIPANTE";
+
+    private static final String ENTRENADOR = "ENTRENADOR";
+
+    private static final String VOTAR = "VOTAR";
+
+    private static final String REGISTRAR = "REGISTRAR";
+
     private ArrayList<String> listaDeTiulos;
+
+    private Participante partiSeleccionado;
 
     public AdaptadoDePagerFragmet(FragmentManager fm) {
         super(fm);
         listaDeTiulos = new ArrayList<>();
-        listaDeTiulos.add("Inicio");
-        listaDeTiulos.add("Grupos");
-        listaDeTiulos.add("Participantes");
-        listaDeTiulos.add("Entrenadores");
-        listaDeTiulos.add("Grupo");
-        listaDeTiulos.add("Participante");
-        listaDeTiulos.add("Entrenador");
-        listaDeTiulos.add("Votar");
-        listaDeTiulos.add("Registrar");
 
+        listaDeTiulos.add(INICIO);
+        listaDeTiulos.add(GRUPOS);
+        listaDeTiulos.add(PARTICIPANTES);
+        listaDeTiulos.add(ENTRENADORES);
+        listaDeTiulos.add(GRUPO);
+        listaDeTiulos.add(PARTICIPANTE);
+        listaDeTiulos.add(ENTRENADOR);
+        listaDeTiulos.add(VOTAR);
+        listaDeTiulos.add(REGISTRAR);
     }
 
     @Override
@@ -59,7 +82,11 @@ public class AdaptadoDePagerFragmet extends FragmentPagerAdapter {
                 g = GrupoFragment.newInstance(position + 1);
                 break;
             case 5:
-                g = ParticipanteFragment.newInstance(position + 1);
+                if (partiSeleccionado!= null)
+                    mostrarMensaje("---Participante en el adaptador: "+partiSeleccionado.getNombre());
+                else
+                    mostrarMensaje("Participante null");
+                g = ParticipanteFragment.newInstance(position + 1, partiSeleccionado);
                 break;
             case 6:
                 g = EntrenadorFragment.newInstance(position + 1);
@@ -85,5 +112,14 @@ public class AdaptadoDePagerFragmet extends FragmentPagerAdapter {
         return listaDeTiulos.get(position);
     }
 
+    public Participante getPartiSeleccionado() {
+        return partiSeleccionado;
+    }
 
+    public void setPartiSeleccionado(Participante partiSeleccionado) {
+        this.partiSeleccionado = partiSeleccionado;
+    }
+    public static void mostrarMensaje(String mensaje) {
+        Log.v("Mensaje", mensaje);
+    }
 }

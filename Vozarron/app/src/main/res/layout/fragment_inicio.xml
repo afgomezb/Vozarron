@@ -24,7 +24,7 @@
             android:layout_height="@dimen/alto_logo_uq"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/marge_arriba_imagen"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/uq_opt" />
 
         <ImageView
             android:id="@+id/imagen"
@@ -32,7 +32,7 @@
             android:layout_height="@dimen/alto_logo_vozarron"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/margen_arriba_imagen_boton"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/logo_opt" />
 
         <Button
             android:id="@+id/btn_votar"

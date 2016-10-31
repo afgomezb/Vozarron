@@ -46,6 +46,7 @@
             android:text="@string/etq_votar"
             android:id="@+id/btn_votar"
             android:layout_marginBottom="@dimen/margen_debajo_boton_votar"
+            android:background="@color/fondo_items"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/margen_arriba_boton" />
 

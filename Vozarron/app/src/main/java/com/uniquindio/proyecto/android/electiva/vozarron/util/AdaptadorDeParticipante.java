@@ -8,11 +8,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
-
-import java.util.ArrayList;
-
 import com.uniquindio.proyecto.android.electiva.vozarron.VO.Participante;
 import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeParticipantesFragment;
+
+import java.util.ArrayList;
 
 /**
  * Created by USUARIO WINDOWS on 23/10/2016.
@@ -74,7 +73,7 @@ public class AdaptadorDeParticipante extends RecyclerView.Adapter<AdaptadorDePar
 
         @Override
         public void onClick(View v) {
-            Log.d("TAG", "Element " + getAdapterPosition() + " clicked. " +
+            Log.d("TAG", "Elemento " + getAdapterPosition() + " clicked. " +
                     txtNombreParticipante.getText());
             listener.onClickPosition(getAdapterPosition());
         }

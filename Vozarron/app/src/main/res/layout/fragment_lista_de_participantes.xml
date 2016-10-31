@@ -6,8 +6,9 @@
     android:background="@color/fondo_normal">
 
     <android.support.v7.widget.RecyclerView
+        android:name="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeParticipantesFragment"
         android:id="@+id/listaParticipantes"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </FrameLayout>

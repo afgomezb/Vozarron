@@ -15,9 +15,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
-import com.uniquindio.proyecto.android.electiva.vozarron.VO.Entrenador;
 import com.uniquindio.proyecto.android.electiva.vozarron.VO.Participante;
 import com.uniquindio.proyecto.android.electiva.vozarron.util.AdaptadorDeParticipante;
+import com.uniquindio.proyecto.android.electiva.vozarron.util.Participantes;
 
 import java.util.ArrayList;
 
@@ -62,26 +62,11 @@ public class ListaDeParticipantesFragment extends Fragment implements AdaptadorD
         // Se ha completado el onCreate de la actividad
         listadoDeParticipantes = (RecyclerView) getView().findViewById(R.id.listaParticipantes);
         participantes= new ArrayList<>();
-        Participante participante = new Participante("Valentina", 22, new Entrenador(), "Estudiante","foto", "video");
-        participantes.add(participante);
-        Participante participante2 = new Participante("Andres", 22, new Entrenador(), "Estudiante","foto", "video");
-        participantes.add(participante2);
-        Participante participante3 = new Participante("Melissa", 23, new Entrenador(), "Estudiante","foto", "video");
-        participantes.add(participante3);
-        Participante participante4 = new Participante("Jose", 23, new Entrenador(), "Estudiante","foto", "video");
-        participantes.add(participante4);
-        Participante participante5 = new Participante("Jorge", 23, new Entrenador(), "Estudiante","foto", "video");
-        participantes.add(participante5);
-        Participante participante6 = new Participante("Mario", 23, new Entrenador(), "Estudiante","foto", "video");
-        participantes.add(participante6);
-        Participante participante7 = new Participante("Pablo", 23, new Entrenador(), "Estudiante","foto", "video");
-        participantes.add(participante7);
-        Participante participante8 = new Participante("Luisa", 23, new Entrenador(), "Estudiante","foto", "video");
-        participantes.add(participante8);
-        Participante participante9 = new Participante("Rosa", 23, new Entrenador(), "Estudiante","foto", "video");
-        participantes.add(participante9);
-        Participante participante10 = new Participante("Juana", 23, new Entrenador(), "Estudiante","foto", "video");
-        participantes.add(participante10);
+
+        Participantes lista = new Participantes();
+
+        participantes.addAll(lista.getParticipantes());
+
         adaptador = new AdaptadorDeParticipante(participantes, this);
         listadoDeParticipantes.setAdapter(adaptador);
         listadoDeParticipantes.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));

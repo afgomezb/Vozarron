@@ -24,4 +24,5 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="@dimen/margen_fragmento" />
 
+
 </LinearLayout>

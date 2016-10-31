@@ -25,6 +25,4 @@
         android:layout_margin="@dimen/margen_arriba_fragmento"
         android:name="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ParticipantesFragment"/>
 
-    <!--class="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeParticipantesFragment"-->
-
 </LinearLayout>

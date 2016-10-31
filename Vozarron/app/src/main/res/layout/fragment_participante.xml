@@ -42,6 +42,7 @@
                     android:text="@string/etq_edad"
                     android:padding="@dimen/relleno_campos_tabla" />
                 <TextView
+                    android:id="@+id/edad_participante"
                     android:text="edad_participante"
                     android:gravity="right"
                     android:padding="@dimen/relleno_campos_tabla" />
