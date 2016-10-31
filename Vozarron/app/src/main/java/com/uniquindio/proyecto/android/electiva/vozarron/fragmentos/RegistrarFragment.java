@@ -19,15 +19,39 @@ import com.uniquindio.proyecto.android.electiva.vozarron.util.Entrenadores;
  */
 public class RegistrarFragment extends Fragment {
 
+    /**
+     * Indice del view pager
+     */
     private static final String INDICE = "indice";
-    private Spinner combo_box_entrenadores;
-    private Spinner combo_box_roles;
+
+    /**
+     * Variable que guarda la vista del fragmento
+     */
     private View view;
 
+    /**
+     * Variable para el combo box de entrenadores
+     */
+    private Spinner combo_box_entrenadores;
+
+    /**
+     * Variable para el combo box de roles
+     */
+    private Spinner combo_box_roles;
+
+    /**
+     * Metodo constructor del fragmento
+     */
     public RegistrarFragment() {
         // Required empty public constructor
     }
 
+    /**
+     * Metodo para crear una instancia del fragmento de registrar
+     *
+     * @param index posicion de la nueva instancia en el menu
+     * @return fragmento de registrar particpante
+     */
     public static RegistrarFragment newInstance (int index) {
         RegistrarFragment fragment = new RegistrarFragment();
         Bundle bundle = new Bundle();
@@ -39,6 +63,14 @@ public class RegistrarFragment extends Fragment {
         return fragment;
     }
 
+    /**
+     * Metodo encargado de dibujar la interfaz del fragmento
+     *
+     * @param inflater           inflater
+     * @param container          contenedor donde estara la interfaz
+     * @param savedInstanceState estado de la instancia
+     * @return retorna la vista que se va mostrar
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -51,6 +83,9 @@ public class RegistrarFragment extends Fragment {
         return view;
     }
 
+    /**
+     * Metodo encargado de llenar el combo box de roles
+     */
     private void mostrarDatosDeRol() {
         //Se inicializa el combo box con el id del xml
         combo_box_roles = (Spinner) view.findViewById(R.id.combo_box_rol);
@@ -71,6 +106,9 @@ public class RegistrarFragment extends Fragment {
         });
     }
 
+    /**
+     * Metodo encargado de llenar el combo box de entrenadores del concurso
+     */
     private void mostrarDatosDeEntrenador() {
         //Se inicializa el combo box con el id del xml
         combo_box_entrenadores = (Spinner) view.findViewById(R.id.combo_box_entrenadores);
@@ -95,8 +133,13 @@ public class RegistrarFragment extends Fragment {
 
     }
 
+    /**
+     * Metodo para mostrar mensajes por consola
+     *
+     * @param mensaje mensaje que se desea mostrar por consola
+     */
     public static void mostrarMensajeLog(String mensaje) {
-        Log.v("MyClonFragment", mensaje);
+        Log.v("Mensaje: ", mensaje);
     }
 
 }

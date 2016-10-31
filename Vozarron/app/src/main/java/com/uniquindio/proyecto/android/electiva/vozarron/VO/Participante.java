@@ -39,6 +39,9 @@ public class Participante {
      */
     private String urlVideo;
 
+    /**
+     * Estado del participante dentro del concurso
+     */
     private String estado;
 
     /**
@@ -171,10 +174,18 @@ public class Participante {
         this.urlVideo = urlVideo;
     }
 
+    /**
+     * Metodo para acceder al valor de la variable estado
+     * @return valor de la variable estado
+     */
     public String getEstado() {
         return estado;
     }
 
+    /**
+     * Metodo modificador del contenido de la variable estado
+     * @param estado nuevo contenido de la variable
+     */
     public void setEstado(String estado) {
         this.estado = estado;
     }

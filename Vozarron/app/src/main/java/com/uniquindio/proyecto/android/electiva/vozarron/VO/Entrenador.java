@@ -15,6 +15,9 @@ public class Entrenador {
     private String historial;
     private String foto;
 
+    /**
+     * Metodo constructor de Participante vacio
+     */
     public Entrenador() {
     }
 

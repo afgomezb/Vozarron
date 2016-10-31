@@ -11,18 +11,38 @@ import android.view.ViewGroup;
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
 
 /**
- * A simple {@link Fragment} subclass.
+ * Fragmento encargado de mostrar los datos de los participantes
+ *
+ * @author Valentina Correa
+ * @author Andres Felipe Gomez
+ * @version 1.0
  */
 public class ParticipantesFragment extends Fragment {
 
+    /**
+     * Indice del view pager
+     */
     private static final String INDICE = "indice";
+
+    /**
+     * Variable que guarda la vista del fragmento
+     */
     private View view;
 
+    /**
+     * Metodo constructor del fragmento
+     */
     public ParticipantesFragment() {
         // Required empty public constructor
     }
 
-    public static ParticipantesFragment newInstance (int index) {
+    /**
+     * Metodo para crear una instancia del fragmento del participantes
+     *
+     * @param index posicion de la nueva instancia en el menu
+     * @return fragmento del participantes
+     */
+    public static ParticipantesFragment newInstance(int index) {
         ParticipantesFragment fragment = new ParticipantesFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(INDICE, index);
@@ -33,15 +53,23 @@ public class ParticipantesFragment extends Fragment {
         return fragment;
     }
 
+    /**
+     * Metodo encargado de dibujar la interfaz del fragmento
+     *
+     * @param inflater           inflater
+     * @param container          contenedor donde estara la interfaz
+     * @param savedInstanceState estado de la instancia
+     * @return retorna la vista que se va mostrar
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-       // mapFragment.getMapAsync(callback);
-       // if(view == null) {
+        // mapFragment.getMapAsync(callback);
+        // if(view == null) {
 
-           view = inflater.inflate(R.layout.fragment_participantes,
-                  container, false);
+        view = inflater.inflate(R.layout.fragment_participantes,
+                container, false);
 
         //}
 
@@ -50,29 +78,11 @@ public class ParticipantesFragment extends Fragment {
         return view;
     }
 
-    @Override
-    public void onDestroyView() {
-       super.onDestroyView();
-           ParticipantesFragment f = (ParticipantesFragment) getFragmentManager()
-                .findFragmentById(R.id.listaParticipantes);
-        if (f != null)
-            getFragmentManager().beginTransaction().remove(f).commit();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        mostrarMensajeLog("El fragmento participantes esta en pausa en este momento");
-        onDestroy();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        // Limpieza total del fragmento
-        mostrarMensajeLog("El fragmento participantes ha sido destruido");
-    }
-
+    /**
+     * Metodo para mostrar mensajes por consola
+     *
+     * @param mensaje mensaje que se desea mostrar por consola
+     */
     public static void mostrarMensajeLog(String mensaje) {
         Log.v("MyClonFragment", mensaje);
     }

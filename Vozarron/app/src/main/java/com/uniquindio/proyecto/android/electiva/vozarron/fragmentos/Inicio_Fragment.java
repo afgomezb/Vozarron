@@ -2,7 +2,6 @@ package com.uniquindio.proyecto.android.electiva.vozarron.fragmentos;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,23 +10,51 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.uniquindio.proyecto.android.electiva.vozarron.actividades.PrincipalActivity;
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
+import com.uniquindio.proyecto.android.electiva.vozarron.actividades.PrincipalActivity;
 
 /**
- * A simple {@link Fragment} subclass.
+ * Fragmento encargado de mostrar los datos del inicio de la aplicacion
+ *
+ * @author Valentina Correa
+ * @author Andres Felipe Gomez
+ * @version 1.0
  */
 public class Inicio_Fragment extends Fragment implements View.OnClickListener {
 
+    /**
+     * Indice del view pager
+     */
     private static final String INDICE = "indice";
+
+    /**
+     * Variable para el boton que redirije a la vista votar
+     */
     private Button btn_votar;
+
+    /**
+     * Variable para el imagen boton registrar
+     */
     private ImageButton btnImage_registrar;
+
+    /**
+     * Variable para el imagen boton internacionalizacion
+     */
     private ImageButton btn_image_internacionalizacion;
 
+    /**
+     * Metodo constructor del fragmento
+     */
     public Inicio_Fragment() {
         // Required empty public constructor
     }
 
+    /**
+     * Metodo para crear una instancia del fragmento delinicio
+     *
+     * @param index posicion de la nueva instancia en el menu
+     * @return fragmento del inicio
+     */
     public static Inicio_Fragment newInstance(int index) {
         Inicio_Fragment fragment = new Inicio_Fragment();
         Bundle bundle = new Bundle();
@@ -39,11 +66,14 @@ public class Inicio_Fragment extends Fragment implements View.OnClickListener {
         return fragment;
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
+    /**
+     * Metodo encargado de dibujar la interfaz del fragmento
+     *
+     * @param inflater           inflater
+     * @param container          contenedor donde estara la interfaz
+     * @param savedInstanceState estado de la instancia
+     * @return retorna la vista que se va mostrar
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -61,24 +91,19 @@ public class Inicio_Fragment extends Fragment implements View.OnClickListener {
         return view;
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        mostrarMensajeLog("El fragmento esta en pausa en este momento");
-        onDestroy();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        // Limpieza total del fragmento
-        mostrarMensajeLog("El fragmento ha sido destruido");
-    }
-
+    /**
+     * Metodo para mostrar mensajes por consola
+     *
+     * @param mensaje mensaje que se desea mostrar por consola
+     */
     public static void mostrarMensajeLog(String mensaje) {
-        Log.v("Mensaje", mensaje);
+        Log.v("Mensaje: ", mensaje);
     }
 
+    /**
+     * Metodo que captura los eventos de los botones de la vista
+     * @param v vista que contiene los botones
+     */
     @Override
     public void onClick(View v) {
         if (v.getId() == btnImage_registrar.getId()) {

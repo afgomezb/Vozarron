@@ -18,20 +18,43 @@ import com.uniquindio.proyecto.android.electiva.vozarron.VO.Participante;
 import com.uniquindio.proyecto.android.electiva.vozarron.util.Participantes;
 
 /**
- * A simple {@link Fragment} subclass.
+ * Fragmento encargado de mostrar los datos de un particpante
+ *
+ * @author Valentina Correa
+ * @author Andres Felipe Gomez
+ * @version 1.0
  */
 public class ParticipanteFragment extends Fragment implements View.OnClickListener {
 
-
+    /**
+     * Indice del view pager
+     */
     private static final String INDICE = "indice";
+
+    /**
+     * Variable para el boton del video del particpante
+     */
     private ImageButton btnImage_video;
+
+    /**
+     * Variable encargada de almacenar el participante seleccionado
+     */
     private Participante partiSeleccionado;
 
+    /**
+     * Metodo constructor del fragmento
+     */
     public ParticipanteFragment() {
         // Required empty public constructor
     }
 
-    public static ParticipanteFragment newInstance (int index, Participante participante) {
+    /**
+     * Metodo para crear una instancia del fragmento del participante
+     *
+     * @param index posicion de la nueva instancia en el menu
+     * @return fragmento del participante
+     */
+    public static ParticipanteFragment newInstance(int index, Participante participante) {
         ParticipanteFragment fragment = new ParticipanteFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(INDICE, index);
@@ -44,7 +67,14 @@ public class ParticipanteFragment extends Fragment implements View.OnClickListen
         return fragment;
     }
 
-
+    /**
+     * Metodo encargado de dibujar la interfaz del fragmento
+     *
+     * @param inflater           inflater
+     * @param container          contenedor donde estara la interfaz
+     * @param savedInstanceState estado de la instancia
+     * @return retorna la vista que se va mostrar
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -60,10 +90,20 @@ public class ParticipanteFragment extends Fragment implements View.OnClickListen
         return view;
     }
 
+    /**
+     * Metodo para mostrar mensajes por consola
+     *
+     * @param mensaje mensaje que se desea mostrar por consola
+     */
     public static void mostrarMensajeLog(String mensaje) {
-        Log.v("MyClonFragment", mensaje);
+        Log.v("Mensaje: ", mensaje);
     }
 
+    /**
+     * Metodo para capturar los eventor de los botones
+     *
+     * @param v vista con los botones de la interfaz
+     */
     @Override
     public void onClick(View v) {
         if (v.getId() == btnImage_video.getId()) {
@@ -73,17 +113,32 @@ public class ParticipanteFragment extends Fragment implements View.OnClickListen
         }
     }
 
+    /**
+     * MEtodo que encargado de retornar el participante seleccionado
+     *
+     * @return particpante seleccionado
+     */
     public Participante getPartiSeleccionado() {
         return partiSeleccionado;
     }
 
+    /**
+     * Metodo para modificar el valor de la variable del participante seleccionado
+     *
+     * @param partiSeleccionado nuevo valor de la variebla
+     */
     public void setPartiSeleccionado(Participante partiSeleccionado) {
         this.partiSeleccionado = partiSeleccionado;
     }
 
-    public void mostrarDatosDeParticipante (View view) {
+    /**
+     * Metodo para mostrar los datos del participante en el fragmento
+     *
+     * @param view vista del fragmento instanciada
+     */
+    public void mostrarDatosDeParticipante(View view) {
         //Se trae la lista de participantes
-        Participantes lista_participantes =  new Participantes();
+        Participantes lista_participantes = new Participantes();
         int posicion = (int) (Math.random() * lista_participantes.getParticipantes().size());
         partiSeleccionado = lista_participantes.getParticipantes().get(posicion);
 
@@ -93,7 +148,7 @@ public class ParticipanteFragment extends Fragment implements View.OnClickListen
 
         //se trae la edad del participante
         TextView edad = (TextView) view.findViewById(R.id.edad_participante);
-        edad.setText(partiSeleccionado.getEdad()+" años");
+        edad.setText(partiSeleccionado.getEdad() + " años");
 
         //se trae el nombre del entrenador del participante
         TextView nombre_entrenador = (TextView) view.findViewById(R.id.entrenador_nombre);

@@ -11,17 +11,37 @@ import android.view.ViewGroup;
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
 
 /**
- * A simple {@link Fragment} subclass.
+ * Fragmento encargado de mostrar los datos de un grupos
+ *
+ * @author Valentina Correa
+ * @author Andres Felipe Gomez
+ * @version 1.0
  */
 public class GruposFragment extends Fragment {
 
+    /**
+     * Indice del view pager
+     */
     private static final String INDICE = "indice";
+
+    /**
+     * Variable que guarda la vista del fragmento
+     */
     private View view;
 
+    /**
+     * Metodo constructor del fragmento
+     */
     public GruposFragment() {
 
     }
 
+    /**
+     * Metodo para crear una instancia del fragmento del grupos
+     *
+     * @param index posicion de la nueva instancia en el menu
+     * @return fragmento del grupos
+     */
     public static GruposFragment newInstance (int index) {
             GruposFragment fragment = new GruposFragment();
             Bundle bundle = new Bundle();
@@ -33,7 +53,14 @@ public class GruposFragment extends Fragment {
             return fragment;
     }
 
-
+    /**
+     * Metodo encargado de dibujar la interfaz del fragmento
+     *
+     * @param inflater           inflater
+     * @param container          contenedor donde estara la interfaz
+     * @param savedInstanceState estado de la instancia
+     * @return retorna la vista que se va mostrar
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -46,21 +73,13 @@ public class GruposFragment extends Fragment {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_grupos, container, false);
     }
-    @Override
-    public void onPause() {
-        super.onPause();
-        mostrarMensajeLog("El fragmento Grupos esta en pausa en este momento");
-        onDestroy();
-    }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        // Limpieza total del fragmento
-        mostrarMensajeLog("El fragmento Grupos ha sido destruido");
-    }
-
+    /**
+     * Metodo para mostrar mensajes por consola
+     *
+     * @param mensaje mensaje que se desea mostrar por consola
+     */
     public static void mostrarMensajeLog(String mensaje) {
-        Log.v("MyClonFragment", mensaje);
+        Log.v("Mensaje: ", mensaje);
     }
 }
