@@ -8,13 +8,16 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
+import com.facebook.FacebookSdk;
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
 import com.uniquindio.proyecto.android.electiva.vozarron.VO.Participante;
-import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeEntrenadoresFragment;
-import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeGruposFragment;
-import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeParticipantesFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.EntrenadoresFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.GrupoFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.GruposFragment;
+import com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ParticipantesFragment;
 import com.uniquindio.proyecto.android.electiva.vozarron.util.AdaptadoDePagerFragmet;
 import com.uniquindio.proyecto.android.electiva.vozarron.util.Participantes;
+import com.uniquindio.proyecto.android.electiva.vozarron.util.Utilidades;
 
 /**
  * Clase que representa la actividad principal de la aplicacion, esta contiene los diferentes fragmentos del menu
@@ -23,7 +26,7 @@ import com.uniquindio.proyecto.android.electiva.vozarron.util.Participantes;
  * @author Andres Felipe Gomez
  * @version 1.0
  */
-public class PrincipalActivity extends AppCompatActivity implements ListaDeParticipantesFragment.OnParticipanteSeleccionadoListener, ListaDeEntrenadoresFragment.OnEntrenadorSeleccionadoListener, ListaDeGruposFragment.OnGrupoSeleccionadoListener, View.OnClickListener {
+public class PrincipalActivity extends AppCompatActivity implements ParticipantesFragment.OnParticipanteSeleccionadoListener, GrupoFragment.OnParticipanteSeleccionadoListener, EntrenadoresFragment.OnEntrenadorSeleccionadoListener, GruposFragment.OnGrupoSeleccionadoListener, View.OnClickListener {
 
     /**
      * ViewPager
@@ -41,24 +44,31 @@ public class PrincipalActivity extends AppCompatActivity implements ListaDeParti
     private AdaptadoDePagerFragmet adapter;
 
     /**
-     * Metodo encargado de inicializar los elementos que se asociados a esta vista
+     * Metodo encargado de inicializar los elementos asociados a esta vista
      *
      * @param savedInstanceState instancia
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Utilidades.obtenerLenguaje(this);
         super.onCreate(savedInstanceState);
+        /**
+        try {
+            Thread.sleep(1000000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }**/
+
+        //Facebook
+        FacebookSdk.sdkInitialize(getApplicationContext());
 
         setContentView(R.layout.activity_principal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
 
-        adapter = new AdaptadoDePagerFragmet(
-                getSupportFragmentManager());
-
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(new AdaptadoDePagerFragmet(
-                getSupportFragmentManager()));
+                getSupportFragmentManager(), this));
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);

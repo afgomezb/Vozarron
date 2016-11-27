@@ -104,8 +104,7 @@ public class VotarFragment extends Fragment {
 
                 //Se trae la imagen del participante
                 ImageView foto = (ImageView) view.findViewById(R.id.imagen);
-                String nombreImagen = parti.getFoto();
-                int res_imagen = getActivity().getResources().getIdentifier("drawable/" + nombreImagen, null, getActivity().getPackageName());
+                int res_imagen = parti.getFoto();
                 foto.setImageResource(res_imagen);
             }
 

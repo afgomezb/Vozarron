@@ -16,13 +16,10 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/margen_arriba_titulo" />
 
-    <fragment
-        android:id="@+id/fragmento_lista_grupos"
-        class="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeGruposFragment"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listaGrupos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="@dimen/margen_fragmento" />
+        android:layout_height="match_parent"/>
 
 
 

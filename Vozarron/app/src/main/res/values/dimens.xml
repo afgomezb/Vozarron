@@ -27,6 +27,8 @@
     <dimen name="relleno_lados_combo_box">30dp</dimen>
     <dimen name="relleno_arriba_abajo_combo_box">5dp</dimen>
 
+    <dimen name="ancho_imagen_lista">110dp</dimen>
+    <dimen name="alto_imagen_lista">110dp</dimen>
     <dimen name="ancho_logo_uq">100dp</dimen>
     <dimen name="alto_logo_uq">100dp</dimen>
     <dimen name="ancho_logo_vozarron">350dp</dimen>
@@ -39,6 +41,9 @@
 
     <dimen name="tamano_texto_resumen_nombre">30sp</dimen>
     <dimen name="tamano_texto_boton_votar">20dp</dimen>
+
+    <dimen name="margen_derecha_imagen_lista">40dp</dimen>
+    <dimen name="margen_izquierda_icono">10dp</dimen>
 
     <dimen name="ancho_boton_votar">100dp</dimen>
 

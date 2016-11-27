@@ -16,13 +16,10 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/margen_arriba_titulo" />
 
-    <fragment
-        android:id="@+id/fragmento_lista_participantes"
-        class="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeParticipantesFragment"
+    <android.support.v7.widget.RecyclerView
+        android:name="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeParticipantesFragment"
+        android:id="@+id/listaParticipantes"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="@dimen/margen_arriba_fragmento"
-        android:name="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ParticipantesFragment"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

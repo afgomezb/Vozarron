@@ -6,7 +6,6 @@
     android:background="@color/fondo_normal"
     android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,13 +15,9 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/margen_arriba_titulo" />
 
-    <fragment
-        android:id="@+id/fragmento_lista_entrenadores"
-        class="com.uniquindio.proyecto.android.electiva.vozarron.fragmentos.ListaDeEntrenadoresFragment"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listaEntrenadores"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="@dimen/margen_fragmento" />
-
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

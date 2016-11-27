@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_app_id">188454708280854</string>
+    <string name="app_name">Vozarron</string>
+    <string name="participantes_titulo">Participants</string>
+    <string name="entrenadores_titulo">Coaches</string>
+    <string name="registrar_titulo">Check in</string>
+    <string name="grupos_titulo">Groups</string>
+    <string name="etq_votar">Vote</string>
+    <string name="etq_id">Id:</string>
+    <string name="etq_nombre">Name::</string>
+    <string name="etq_genero">Gender:</string>
+    <string name="etq_historial">Record:</string>
+    <string name="etq_entrenador">Coach:</string>
+    <string name="etq_rol">Role:</string>
+    <string name="etq_foto">Photo:</string>
+    <string name="etq_video">Video:</string>
+    <string name="etq_edad">Age:</string>
+    <string name="etq_estado">State:</string>
+    <string name="registrar">To Register</string>
+    <string name="etq_ver_video">Watch video</string>
+    <string name="etq_registrar_participante">Register Participant</string>
+    <string name="etq_internacionalizacion">Change language</string>
+    <string name="ingrese_nombre">Enter your name</string>
+    <string name="btn_votar">Vote</string>
+    <string name="etq_descripcion">Register Participant</string>
+    <string name="etq_nombre_edit">Enter your nam</string>
+    <string name="etq_edad_edit">Enter age</string>
+    <string name="etq_contrasena_edit">Enter password</string>
+    <string name="etq_foto_edit">Enter name of photo</string>
+    <string name="etq_video_edit">Enter video URL</string>
+    <string name="etq_registrar">To Register</string>
+    <string name="etq_contrasena">Password</string>
+    <string name="tab_grupos">Grups</string>
+    <string name="tab_grupo">Grup</string>
+    <string name="tab_inicio">Start</string>
+    <string name="tab_participantes">Participants</string>
+    <string name="tab_participante">Participant</string>
+    <string name="tab_entrenadores">Coaches</string>
+    <string name="tab_entrenador">Coach</string>
+    <string name="tab_votar">Vote</string>
+    <string name="tab_registrar">Register</string>
+</resources>

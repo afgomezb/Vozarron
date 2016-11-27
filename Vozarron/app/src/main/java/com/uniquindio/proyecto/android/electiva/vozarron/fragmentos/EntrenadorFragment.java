@@ -46,7 +46,7 @@ public class EntrenadorFragment extends Fragment implements View.OnClickListener
     private Entrenador entrenadorSeleccionado;
 
     /**
-     * Metodo constructo del fragmento
+     * Metodo constructor del fragmento
      */
     public EntrenadorFragment() {
         // Required empty public constructor
@@ -122,8 +122,7 @@ public class EntrenadorFragment extends Fragment implements View.OnClickListener
 
         //Se trae la imagen del participante
         ImageView foto = (ImageView) view.findViewById(R.id.imagen);
-        String nombreImagen = entrenadorSeleccionado.getFoto();
-        int res_imagen = getActivity().getResources().getIdentifier("drawable/" + nombreImagen, null, getActivity().getPackageName());
+        int res_imagen = entrenadorSeleccionado.getFoto();
         foto.setImageResource(res_imagen);
 
     }

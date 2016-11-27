@@ -32,7 +32,7 @@ public class Participante {
     /**
      * Foto del participante
      */
-    private String foto;
+    private int foto;
 
     /**
      * Url del video en YOU TUBE con que participara en el concurso el Vozarron
@@ -54,7 +54,7 @@ public class Participante {
      * @param foto       Foto del participante
      * @param urlVideo   Url del video en YOU TUBE con que participara en el concurso el Vozarron
      */
-    public Participante(String nombre, int edad, Entrenador entrenador, String estado, String rol, String foto, String urlVideo) {
+    public Participante(String nombre, int edad, Entrenador entrenador, String estado, String rol, int foto, String urlVideo) {
         this.nombre = nombre;
         Edad = edad;
         this.entrenador = entrenador;
@@ -143,7 +143,7 @@ public class Participante {
      *
      * @return valor de la variable foto
      */
-    public String getFoto() {
+    public int getFoto() {
         return foto;
     }
 
@@ -152,7 +152,7 @@ public class Participante {
      *
      * @param foto nuevo contenido de la variable
      */
-    public void setFoto(String foto) {
+    public void setFoto(int foto) {
         this.foto = foto;
     }
 

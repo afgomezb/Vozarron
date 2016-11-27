@@ -25,6 +25,12 @@
                     android:contentDescription="@string/etq_internacionalizacion"
                     android:src="@mipmap/ic_internacionalizacion" />
                 <ImageButton
+                    android:id="@+id/conexion"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_conexion" />
+                <ImageButton
                     android:id="@+id/btn_image_registrar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -36,12 +42,14 @@
             </TableRow>
         </TableLayout>
 
+
+
+
         <ImageView
             android:id="@+id/imagen_uq"
             android:layout_width="@dimen/ancho_logo_uq"
             android:layout_height="@dimen/alto_logo_uq"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/marge_arriba_imagen"
             android:src="@drawable/uq_opt" />
 
         <ImageView
@@ -49,7 +57,6 @@
             android:layout_width="@dimen/ancho_logo_vozarron"
             android:layout_height="@dimen/alto_logo_vozarron"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/margen_arriba_imagen_boton"
             android:src="@drawable/logo_opt" />
 
         <Button
@@ -57,7 +64,6 @@
             android:layout_width="@dimen/ancho_boton_votar"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="@dimen/margen_debajo_boton_votar"
             android:background="@color/fondo_items"
             android:text="@string/btn_votar"
             android:textColor="@color/white"

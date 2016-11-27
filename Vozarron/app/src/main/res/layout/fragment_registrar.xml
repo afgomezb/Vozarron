@@ -14,73 +14,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/etq_nombre"
-            android:id="@+id/etq_nombre"
+            android:text="@string/etq_registrar_participante"
+            android:id="@+id/registro"
             android:layout_marginTop="@dimen/margen_arriba_titulo"
             android:layout_gravity="center_horizontal" />
-
-        <EditText
-            android:id="@+id/nombre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/etq_nombre_edit"
-            android:inputType="text"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/etq_edad"
-            android:id="@+id/etq_edad"
-            android:layout_marginTop="@dimen/margen_arriba_titulo"
-            android:layout_gravity="center_horizontal" />
-
-        <EditText
-            android:id="@+id/edad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/etq_edad_edit"
-            android:inputType="number"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/etq_entrenador"
-            android:id="@+id/etq_entrenador"
-            android:layout_marginTop="@dimen/margen_arriba_titulo"
-            android:layout_gravity="center_horizontal" />
-
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/combo_box_entrenadores"
-            android:layout_gravity="center_horizontal"
-            android:paddingLeft="@dimen/relleno_lados_combo_box"
-            android:paddingRight="@dimen/relleno_lados_combo_box"
-            android:paddingTop="@dimen/relleno_arriba_abajo_combo_box"
-            android:paddingBottom="@dimen/relleno_arriba_abajo_combo_box" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/etq_rol"
-            android:id="@+id/etq_rol"
-            android:layout_marginTop="@dimen/margen_arriba_titulo"
-            android:layout_gravity="center_horizontal" />
-
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/combo_box_rol"
-            android:layout_gravity="center_horizontal"
-            android:paddingLeft="@dimen/relleno_lados_combo_box"
-            android:paddingRight="@dimen/relleno_lados_combo_box"
-            android:paddingTop="@dimen/relleno_arriba_abajo_combo_box"
-            android:paddingBottom="@dimen/relleno_arriba_abajo_combo_box" />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -90,9 +27,118 @@
             android:layout_margin="@dimen/margen_tabla">
 
             <TableRow>
+
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/etq_nombre"
+                    android:id="@+id/etq_nombre"
+                    android:layout_marginTop="@dimen/margen_arriba_titulo"
+                    android:layout_gravity="center_horizontal" />
+
+                <EditText
+                    android:id="@+id/nombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/etq_nombre_edit"
+                    android:inputType="text"
+                    android:layout_gravity="center_horizontal"/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/etq_edad"
+                    android:id="@+id/etq_edad"
+                    android:layout_marginTop="@dimen/margen_arriba_titulo"
+                    android:layout_gravity="center_horizontal" />
+
+                <EditText
+                    android:id="@+id/edad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/etq_edad_edit"
+                    android:inputType="number"
+                    android:layout_gravity="center_horizontal"/>
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/etq_entrenador"
+                    android:id="@+id/etq_entrenador"
+                    android:layout_marginTop="@dimen/margen_arriba_titulo"
+                    android:layout_gravity="center_horizontal" />
+
+                <EditText
+                    android:id="@+id/contrasena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/etq_contrasena_edit"
+                    android:inputType="textPassword"
+                    android:layout_gravity="center_horizontal"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/etq_contrasena"
+                    android:id="@+id/etq_contrasena"
+                    android:layout_marginTop="@dimen/margen_arriba_titulo"
+                    android:layout_gravity="center_horizontal" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/combo_box_entrenadores"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="@dimen/relleno_lados_combo_box"
+                    android:paddingRight="@dimen/relleno_lados_combo_box"
+                    android:paddingTop="@dimen/relleno_arriba_abajo_combo_box"
+                    android:paddingBottom="@dimen/relleno_arriba_abajo_combo_box" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/etq_rol"
+                    android:id="@+id/etq_rol"
+                    android:layout_marginTop="@dimen/margen_arriba_titulo"
+                    android:layout_gravity="center_horizontal" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/combo_box_rol"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="@dimen/relleno_lados_combo_box"
+                    android:paddingRight="@dimen/relleno_lados_combo_box"
+                    android:paddingTop="@dimen/relleno_arriba_abajo_combo_box"
+                    android:paddingBottom="@dimen/relleno_arriba_abajo_combo_box" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/etq_foto"
-                    android:padding="@dimen/relleno_campos_tabla" />
+                    android:id="@+id/etq_foto"
+                    android:layout_marginTop="@dimen/margen_arriba_titulo"
+                    android:layout_gravity="center_horizontal" />
                 <EditText
                     android:id="@+id/foto"
                     android:layout_width="wrap_content"
@@ -104,8 +150,13 @@
 
             <TableRow>
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/etq_video"
-                    android:padding="@dimen/relleno_campos_tabla" />
+                    android:id="@+id/etq_video"
+                    android:layout_marginTop="@dimen/margen_arriba_titulo"
+                    android:layout_gravity="center_horizontal" />
                 <EditText
                     android:id="@+id/video"
                     android:layout_width="wrap_content"
@@ -117,6 +168,12 @@
 
         </TableLayout>
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -125,7 +182,6 @@
             android:layout_marginBottom="@dimen/margen_debajo_boton_votar"
             android:background="@color/fondo_items"
             android:layout_gravity="center_horizontal" />
-
 
     </LinearLayout>
 </ScrollView>

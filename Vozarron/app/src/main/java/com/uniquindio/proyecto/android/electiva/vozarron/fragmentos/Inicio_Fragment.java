@@ -1,6 +1,10 @@
 package com.uniquindio.proyecto.android.electiva.vozarron.fragmentos;
 
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -9,9 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.uniquindio.proyecto.android.electiva.vozarron.R;
 import com.uniquindio.proyecto.android.electiva.vozarron.actividades.PrincipalActivity;
+import com.uniquindio.proyecto.android.electiva.vozarron.util.Utilidades;
 
 /**
  * Fragmento encargado de mostrar los datos del inicio de la aplicacion
@@ -41,6 +47,11 @@ public class Inicio_Fragment extends Fragment implements View.OnClickListener {
      * Variable para el imagen boton internacionalizacion
      */
     private ImageButton btn_image_internacionalizacion;
+
+    /**
+     * Variable para el icono de la conexion
+     */
+    private ImageButton icono_conexion;
 
     /**
      * Metodo constructor del fragmento
@@ -88,7 +99,61 @@ public class Inicio_Fragment extends Fragment implements View.OnClickListener {
         btn_image_internacionalizacion = (ImageButton) view.findViewById(R.id.btn_image_internacionalizacion);
         btn_image_internacionalizacion.setOnClickListener(this);
 
+        icono_conexion = (ImageButton) view.findViewById(R.id.conexion);
+        icono_conexion.setOnClickListener(this);
+
+        mostrarComprobacionDeConexion();
+
         return view;
+    }
+
+    /**
+     * MEtodo para mostrar si la aplicacion tiene conexcion a internet y modificar el icono de la conexion
+     */
+    public void mostrarComprobacionDeConexion () {
+
+        boolean conexion=compruebaConexion(this.getContext());
+
+        if (!conexion) {
+            mostrarMensaje(getContext(), "Sin conexion a internet");
+            icono_conexion.setImageResource(R.mipmap.ic_sin_conexion);
+        } else {
+            mostrarMensaje(getContext(), "Conectado a internet");
+            icono_conexion.setImageResource(R.mipmap.ic_conexion);
+        }
+    }
+
+
+    /**
+     * Función para comprobar si hay conexión a Internet
+     * @param context
+     * @return boolean
+     */
+    public static boolean compruebaConexion(Context context) {
+
+        boolean connected = false;
+
+        ConnectivityManager connec = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        // Recupera todas las redes (tanto móviles como wifi)
+        NetworkInfo[] redes = connec.getAllNetworkInfo();
+
+        for (int i = 0; i < redes.length; i++) {
+            // Si alguna red tiene conexión, se devuelve true
+            if (redes[i].getState() == NetworkInfo.State.CONNECTED) {
+                connected = true;
+            }
+        }
+        return connected;
+    }
+
+    /**
+     * Metodo encargado de mostrar mensajes
+     *
+     * @param message Mensaje que se desea mostrar
+     */
+    public static void mostrarMensaje(Context context, String message) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -114,6 +179,13 @@ public class Inicio_Fragment extends Fragment implements View.OnClickListener {
             ((PrincipalActivity)getActivity()).modificarVista(7);
         } else if (v.getId() == btn_image_internacionalizacion.getId()) {
             mostrarMensajeLog("ImageButton para la internacionalizacion");
+            Utilidades.cambiarIdioma(getContext());
+            Intent intent = getActivity().getIntent();
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            getActivity().finish();
+            startActivity(intent);
+        } else if (v.getId() == icono_conexion.getId()) {
+            mostrarComprobacionDeConexion();
         }
     }
 }

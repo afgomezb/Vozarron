@@ -1,5 +1,8 @@
 package com.uniquindio.proyecto.android.electiva.vozarron.util;
 
+import android.os.AsyncTask;
+
+import com.uniquindio.proyecto.android.electiva.vozarron.R;
 import com.uniquindio.proyecto.android.electiva.vozarron.VO.Entrenador;
 
 import java.util.ArrayList;
@@ -12,13 +15,13 @@ public class Entrenadores {
     private ArrayList <Entrenador> entrenadores = new ArrayList<>();
 
     public Entrenadores() {
-        Entrenador entre = new Entrenador("00001", "Jhonny Rivera", "Despecho", "Nacido en Pereira, Colombia.", "jhonny");
+        Entrenador entre = new Entrenador("00001", "Jhonny Rivera", "Despecho", "Nacido en Pereira, Colombia.", R.drawable.jhonny);
         entrenadores.add(entre);
 
-        Entrenador entre2 = new Entrenador("00002", "Rihanna", "Pop", "Cantante, actriz y diseñadora de moda.", "rihanna");
+        Entrenador entre2 = new Entrenador("00002", "Rihanna", "Pop", "Cantante, actriz y diseñadora de moda.", R.drawable.rihanna);
         entrenadores.add(entre2);
 
-        Entrenador entre3 = new Entrenador("00003", "Adele", "Pop", "Cantante y compositora británica.", "adele");
+        Entrenador entre3 = new Entrenador("00003", "Adele", "Pop", "Cantante y compositora británica.", R.drawable.adele);
         entrenadores.add(entre3);
     }
 
@@ -47,4 +50,6 @@ public class Entrenadores {
         }
         return nombreEntrenadores;
     }
+
+
 }

@@ -160,8 +160,8 @@ public class ParticipanteFragment extends Fragment implements View.OnClickListen
 
         //Se trae la imagen del participante
         ImageView foto = (ImageView) view.findViewById(R.id.imagen);
-        String nombreImagen = lista_participantes.getParticipantes().get(posicion).getFoto();
-        int res_imagen = getActivity().getResources().getIdentifier("drawable/" + nombreImagen, null, getActivity().getPackageName());
+
+        int res_imagen = partiSeleccionado.getFoto();
         foto.setImageResource(res_imagen);
 
     }

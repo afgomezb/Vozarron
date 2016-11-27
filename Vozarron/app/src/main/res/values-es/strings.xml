@@ -1,4 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="cargando_participante">Cargando participante</string>
+    <string name="esperar">Esperar</string>
     <string name="facebook_app_id">188454708280854</string>
     <string name="app_name">Vozarron</string>
     <string name="participantes_titulo">Participantes</string>
@@ -30,12 +33,13 @@
     <string name="etq_video_edit">Ingrese URL del video</string>
     <string name="etq_registrar">Registrar</string>
     <string name="etq_contrasena">Contraseña</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-    <string name="tap_grupo">Grupo</string>
-
-
-
+    <string name="tab_grupos">Grupos</string>
+    <string name="tab_grupo">Grupo</string>
+    <string name="tab_inicio">Inicio</string>
+    <string name="tab_participantes">Participantes</string>
+    <string name="tab_participante">Participante</string>
+    <string name="tab_entrenadores">Entrenadores</string>
+    <string name="tab_entrenador">Entrenador</string>
+    <string name="tab_votar">Votar</string>
+    <string name="tab_registrar">Registrar</string>
 </resources>
